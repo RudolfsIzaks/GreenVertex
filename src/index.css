@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  @apply bg-background;
+}
+
+body {
+  @apply bg-background;
+}
+
+.hr_grad {
+  border: none;
+  height: 1px; /* Adjust the height as needed */
+  background-image: radial-gradient(circle, rgba(51,175,83,1) 10%, rgba(0,0,0,0) 90%);
+}
+
+.hero {
+  background-color: #171717e7;
+  background-image: url('./assets/BG.gif');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  border: 2px solid #33AF53;
+  /* border-image-source: linear-gradient(180deg, rgba(51,175,83,1) 15%, rgba(0,0,0,0) 100%); */
+  /* border-image-slice: 1; */
+  border-radius: 12px;
+}
+
+.line {
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.circle {
+  transition: transform 0.1s linear;
+}
+
+.transition-all {
+  transition: all 0.5s ease-out;
+}
+
+.tab_container {
+  /* background-image: url('assets/Green3DVertex.png'); */
+  background-origin: border-box;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.shiny_background {
+  background-color: rgba(45, 45, 45, 0.862);
+  backdrop-filter: blur(5px);
+}
+
+.shiny2_background {
+  background-color: rgba(45, 45, 45, 0.031);
+  backdrop-filter: blur(1px);
+}
+
+.twin_section {
+  background-image: url('./assets/background-sim.webp');
+  background-color: #171717c0;
+  background-blend-mode: multiply;
+}
+
+.button_grid {
+  border-top: #33AF53 solid 1px;
+  border-bottom: #33AF53 solid 1px;
+  border-inline: #33AF53 solid 1px;
+
+}
+
+.grid_dummy {
+  border-top: #33AF53 solid 1px;
+  border-bottom: #33AF53 solid 1px;
+
+}
+
+.text_grid {
+  border-bottom: #33AF53 solid 1px;
+  border-bottom: #33AF53 solid 1px;
+  border-inline: #33AF53 solid 1px;
+}
+
+.grid_cont {
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.stats_grid {
+  border-bottom: #33AF53 solid 1px;
+  border-inline: #33AF53 solid 1px;
+}
+
+.sticky_container {
+  height: 500dvh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky_card {
+  width: 99vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-inline: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.underline {
+  width: 70%;
+  height: 2px;
+  background-color: #33AF53;
+}
+
+
+.widhttt {
+  width: 99vw;
+}
