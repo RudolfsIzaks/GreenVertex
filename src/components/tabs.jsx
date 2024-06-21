@@ -64,12 +64,13 @@ const TabbedInterface = () => {
   return (
     <div className="gap-0 pb-10 h-screen grid md:grid-cols-8 grid_cont justify-center">
      <div className="grid_dummy"></div>
-      <div className="container h-full col-start-2 col-span-6 button_grid">
+     <div className="grid_dummy"></div>
+      <div className="container h-full col-start-3 col-span-4 button_grid">
         <div className="tabs flex w-full justify-center flex-wrap items-center p-4 rounded-xl mt-4 gap-4">
           {tabData.map((tab, index) => (
             <button
               key={index}
-              className={`py-4 px-5 font-semibold w-auto rounded-full shadow-md focus:outline-none text-xl text-white hover:scale-110 duration-200 hover:bg-green ${
+              className={`py-4 px-5 font-semibold w-auto rounded-full shadow-md focus:outline-none text-md text-white hover:scale-110 duration-200 hover:bg-green ${
                 selectedTab.label === tab.label ? "bg-green text-white" : "bg-card"
               }`}
               onClick={() => setSelectedTab(tab)}
@@ -80,17 +81,19 @@ const TabbedInterface = () => {
         </div>
       </div>
       <div className="grid_dummy"></div>
-      <div className="grid_dummy-none"></div>
-      <div className="w-full flex flex-col justify-center items-start col-start-2 col-span-4 text_grid">
+      <div className="grid_dummy"></div>
+      <div className="grid_dummy-bottom"></div>
+      <div className="grid_dummy-bottom"></div>
+      <div className="w-full flex flex-col justify-center items-start col-start-3 col-span-2 text_grid">
         <div className="content rounded-xl p-5">
-          <h2 className="text-green text-headline-3 font-bold font-inter">{selectedTab.headline}</h2>
+          <h2 className="text-green text-subheadline-3 font-bold font-inter">{selectedTab.headline}</h2>
           <p className="mt-4 text-md font-inter font-semibold pr-20 text-white">{selectedTab.body}</p>
         </div>
       </div>
       <div className="col-span-2 icon-grid"></div>
-      <div className="grid_dummy-none"></div>
-      <div className="grid_dummy"></div>
-      <div className="progress-bars py-6 px-5 col-start-2 col-span-6 stats_grid">
+      <div className="grid_dummy-bottom col-span-2"></div>
+      <div className="grid_dummy-bottom col-span-2"></div>
+      <div className="progress-bars py-6 px-5 col-start-3 col-span-4 stats_grid">
           {selectedTab.output > 0 && (
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-white mb-3">Potential Output: <i className="text-green font-black font-inter">+{selectedTab.output}%</i></h3>
@@ -114,7 +117,8 @@ const TabbedInterface = () => {
             </div>
           )}
         </div>
-        <div className="grid_dummy"></div>
+        <div className="grid_dummy-bottom"></div>
+        <div className="grid_dummy-bottom"></div>
     </div>
   );
 };
