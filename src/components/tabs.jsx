@@ -81,7 +81,7 @@ const TabbedInterface = () => {
       </div>
       <div className="grid_dummy"></div>
       <div className="grid_dummy"></div>
-      <div className="w-full flex flex-col justify-center items-center col-span-6 col-start-2 text_grid">
+      <div className="w-full flex flex-col justify-center items-start col-span-6 col-start-2 text_grid">
         <div className="content rounded-xl p-5">
           <h2 className="text-green text-headline-3 font-bold font-inter">{selectedTab.headline}</h2>
           <p className="mt-4 text-md font-inter font-semibold pr-20 text-white">{selectedTab.body}</p>
