@@ -136,3 +136,12 @@ body {
 .widhttt {
   width: 99vw;
 }
+
+.icon-grid {
+  border-right: 1px solid #33AF53;
+  border-bottom: 1px solid #33AF53;
+}
+
+.grid_dummy-none {
+  border: none;
+}
