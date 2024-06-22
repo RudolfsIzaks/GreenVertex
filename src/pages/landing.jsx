@@ -4,6 +4,8 @@ import "../index.css";
 import TabbedInterface from "../components/tabs";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Questions from "../components/questions";
+import BG3D from '../assets/Green3DVertex.png';
 
 function LandingPage() {
   useEffect(() => {
@@ -16,56 +18,36 @@ function LandingPage() {
     <>
       <div className="hero h-screen flex justify-center items-center">
         <NavBar />
-        <div className="flex flex-col items-center justify-center md:mt-10 md:px-40">
+        <div className="flex items-center justify-between md:mt-10 md:px-32">
+          <div className="w-1/2 relative z-10">
           <p className="text-green text-subheadline-3 mb-2 italic">
             Ready To Turn Profit Leaks Into Revenue Streams?
           </p>
-          <h1 className="text-white text-headline-1 font-inter font-black text-center">
+          <h1 className="text-white text-headline-2 font-inter font-black text-left">
             Slash Costs, Eliminate Inefficiencies & Uplift Profitability!
           </h1>
-          <p className="text-white text-md font-inter mt-2">
+          <p className="text-white text-md font-inter mt-2 w-96">
             Discover the proven strategy that will reduce costs and have your
             business operation at 110%
           </p>
           <button className="font-inter font-black text-2xl text-white bg-green mt-10 py-2 px-5 rounded-md hover:bg-transparent hover:scale-110 hover:text-green border-2 border-green duration-200">
             Learn More
           </button>
-        </div>
-      </div>
-      <div className="sticky_container">
-        <div className="sticky_card bg-background">
-          <div className="p-20">
-            <h1 className="text-headline-1 text-white font-black font-inter">Dear Business Builder...</h1>
-            <span className="underline" data-aos="flip-right"></span>
           </div>
-        </div>
-        <div className="sticky_card bg-green">
-          <div>
-            <h1 className="text-headline-1 text-white font-black font-inter">Are Inefficiencies Eating Up Your profits?</h1>
-          </div>
-        </div>
-        <div className="sticky_card bg-background">
-          <div className="relative widhttt h-screen flex justify-center items-center p-20">
-            <div className="absolute top-0 left-0 bg-white w-1/2 h-screen"></div>
-            <h1 className="text-headline-1 text-white font-black font-inter mix-blend-exclusion">Tired of double-guessing your decisions?</h1>
-          </div>
-        </div>
-        <div className="sticky_card">
-          <div className="bg-card p-20">
-            <h1 className="text-headline-1 text-white font-black font-inter">Looking for an Effortless Way to Drive <i className="text-green">Real Results?</i></h1>
-          </div>
-        </div>
-        <div className="sticky_card">
-          <div className="bg-background h-screen widhttt flex justify-center items-center">
-            <h1 className="text-headline-1 text-white font-black font-inter">These Issues are All Too Common In…</h1>
+          <div className="absolute z-0">
+            <img src={BG3D} alt="" />
           </div>
         </div>
       </div>
+      <Questions/>
       <TabbedInterface />
-      <div className="h-screen flex items-center justify-center twin_section">
-        <div className="text-center">
-          <p className="text-white relative z-10 text-subheadline-2">Discover How to Avoid These Common Pitfalls and Transform Them Profits with...</p>
-          <h1 className="relative text-white text-headline-1 font-inter font-black z-10">The Digital Twin Simulation</h1>
+      <div className="h-screen flex flex-col justify-center items-center">
+        <h2 className="text-subheadline-3 text-green font-inter font-bold" data-aos="zoom-in-up">Discover How to Avoid These Common Pitfalls and Transform Them Into Profits with...</h2>
+        <h1 className="text-headline-1 text-white font-inter font-black" data-aos="zoom-in">The Digital Twin Simulation</h1>
+        <div className="relative flex justify-center items-center rounded-md bg-background md:px-2 md:py-10 box-border md:w-1/2 overflow-hidden border border-gray-600 mt-8 hover:scale-125 duration-200">
+          <div className="z-0 absolute blur-el w-32 h-32 top-0 left-0 bg-green rounded-full animate-pulse"></div>
+          <p className="z-10 text-white text-subheadline-3 font-inter w-4/5 text-center">78% of All Fortune 100 Companies Swear by This Complex, Yet Extremely Profitable Approach.</p>
+          <div className="z-0 absolute blur-el w-32 h-32 bottom-0 right-0 bg-lime-400 rounded-full animate-pulse"></div>
         </div>
       </div>
     </>

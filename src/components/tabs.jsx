@@ -66,7 +66,8 @@ const TabbedInterface = () => {
      <div className="grid_dummy"></div>
      <div className="grid_dummy"></div>
       <div className="container h-full col-start-3 col-span-4 button_grid">
-        <div className="tabs flex w-full justify-center flex-wrap items-center p-4 rounded-xl mt-4 gap-4">
+      <h2 className="relative z-10 text-headline-3 font-inter font-extrabold text-white p-3 text-center">These Issues are All Too Common In…</h2>
+        <div className="tabs flex w-full justify-center flex-wrap items-center px-4 pb-4 rounded-xl mt-4 gap-4">
           {tabData.map((tab, index) => (
             <button
               key={index}
