@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import '../index.css';
-import bg3D from '../assets/Green3DVertex.png';
+import manufacturing from '../assets/manufacturing.png';
+import logistics from '../assets/logistics.png';
+import transportation from '../assets/transportation.png';
+import retail from '../assets/retail.png';
+import energy from '../assets/energy.png';
+import fulfillment from '../assets/fulfillment.png';
 
 const tabData = [
   {
@@ -8,42 +13,48 @@ const tabData = [
     headline: "Bottlenecks slowing you down?",
     body: "Imagine eliminating them and running at full speed without disruptions, boosting your through-put by 43%!",
     output: 43,
-    savings: 0 // No savings mentioned
+    savings: 0,
+    image: manufacturing
   },
   {
     label: "Logistics and Supply Chain",
     headline: "Unpredictable delays causing headaches?",
     body: "What if you could foresee and prevent them, ensuring smooth operations, happy clients, all the while reducing costs by 15% to 40%?",
-    output: 0, // No output mentioned
-    savings: 40 // Taking the upper value of the range
+    output: 0, 
+    savings: 40 ,
+    image: logistics
   },
   {
     label: "Transportation",
     headline: "Traffic jams and scheduling chaos?",
     body: "What if you could ensure smooth traffic flow and perfect schedules, enhancing punctuality and service quality by 20-40%?",
-    output: 40, // Taking the upper value of the range
-    savings: 0 // No savings mentioned
+    output: 40, 
+    savings: 0,
+    image: transportation
   },
   {
     label: "Retail and Online Grocers",
     headline: "Stockouts and delivery inefficiencies hurting profits?",
     body: "Imagine the perfect inventory management and streamlined delivery processes that reduces labor, inventory and delivery costs by 10-30% each!",
-    output: 0, // No output mentioned
-    savings: 30 // Taking the upper value of the range
+    output: 0, 
+    savings: 30,
+    image: retail
   },
   {
     label: "Energy and Utilities",
     headline: "Struggling with demand predictions?",
     body: "Envision accurate forecasts and optimal resource allocation, cutting waste by 10%-20% and saving on operational costs by 10-30%!",
-    output: 0, // No output mentioned
-    savings: 30 // Taking the upper value of the range
+    output: 0, 
+    savings: 30,
+    image: energy
   },
   {
     label: "Fulfillment Centers",
     headline: "Operational issues slowing down throughput?",
     body: "Imagine achieving a 43% higher throughput while minimizing labor costs effortlessly and by 20%-40%, ensuring smooth operations and fewer production incidents.",
     output: 43,
-    savings: 40 // Taking the upper value of the range
+    savings: 40,
+    image: fulfillment
   },
 ];
 
@@ -91,10 +102,13 @@ const TabbedInterface = () => {
           <p className="mt-4 text-md font-inter font-semibold pr-20 text-white">{selectedTab.body}</p>
         </div>
       </div>
-      <div className="col-span-2 icon-grid"></div>
+      <div className="col-span-2 icon-grid flex justify-center items-center">
+        <img src={selectedTab.image} width="60%"/>
+      </div>
       <div className="grid_dummy-bottom col-span-2"></div>
       <div className="grid_dummy-bottom col-span-2"></div>
       <div className="progress-bars py-6 px-5 col-start-3 col-span-4 stats_grid">
+          <h1 className="italic font-inter font-black text-white text-headline-3 mb-5">With <i className="text-green">Green Vertex</i></h1>
           {selectedTab.output > 0 && (
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-white mb-3">Potential Output: <i className="text-green font-black font-inter">+{selectedTab.output}%</i></h3>

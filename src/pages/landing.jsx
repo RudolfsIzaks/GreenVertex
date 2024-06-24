@@ -84,11 +84,11 @@ function LandingPage() {
         </p>
       </div>
       <div className="flex gap-5 justify-center flex-grow">
-        <div data-aos="flip-right" className="bg-card p-10 flex flex-col justify-center items-center rounded-xl border border-gray-800">
+        <div data-aos="flip-right" className="bg-card py-10 px-16 flex flex-col justify-center items-center rounded-xl border border-gray-800">
           <img src={Chris} alt="Chris Green Vertex" className="rounded-full w-48" />
           <h2 className="font-inter font-black text-subheadline-2 text-white text-center mt-3">Chris Brett</h2>
           <p className="text-gray-300">CTO, Founder, Head of Engineering</p>
-          <button className="py-2 px-5 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Reach Out</button>
+          <button className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Reach Out</button>
         </div>
       </div>
       </div>
