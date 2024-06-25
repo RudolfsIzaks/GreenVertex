@@ -32,7 +32,7 @@ function Services() {
                         <i className="font-inter font-bold text-green">If you can map it out, you can simulate it.</i>
                     </p>
                 </div>
-                <div className="flex flex-col justify-center items-center w-full md:mt-32">
+                <div className="flex flex-col justify-center items-center h-screen w-full">
                     <div className="py-20 relative w-full flex-col flex justify-center items-center">
                         <div className="absolute w-64 h-64 bg-green rounded-full z-0 blur-2xl animate-pulse" data-aos="flip-right"></div>
                         <div className="z-10 relative w-64 h-64 bg-background rounded-full flex justify-center items-center" data-aos="flip-right">
