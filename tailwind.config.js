@@ -22,6 +22,7 @@ module.exports = {
         'subheadline-2': '32px',
         'headline-3': '32px',
         'subheadline-3': '24px',
+        'subheadline-4': '20px',
       },
     },
   },

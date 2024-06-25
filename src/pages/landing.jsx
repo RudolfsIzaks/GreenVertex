@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import Questions from "../components/questions";
 import BG3D from "../assets/Green3DVertex.png";
 import Chris from '../assets/chris.jpg';
+import Services from "../components/services";
+import sim from '../assets/BG.gif';
 
 function LandingPage() {
   useEffect(() => {
@@ -92,6 +94,26 @@ function LandingPage() {
         </div>
       </div>
       </div>
+      <div className="relative md:px-32 h-screen flex flex-row-reverse justify-center items-center">
+      <div className="w-1/3 z-10">
+          <img src={sim} className="rounded-xl"/>
+        </div>
+        <div className="w-2/3">
+        <div className="absolute w-64 h-64 bg-lime-700 blur-3xl rounded-full animate-pulse z-0"></div>
+        <p className="font-inter font-bold text-green">Now Revealing...</p>
+        <h1 className="font-inter relative z-10 font-black text-headline-2 text-white md:w-4/5">
+        The Secret Behind 78% Of Fortune 100 Companies Repeated Success
+        </h1>
+        <p className="mt-5 text-white font-inter w-2/3 z-10 relative leading-relaxed">
+        For nearly a decade, we've helped industry giants save millions with our Digital Twin Simulation.
+
+        This revolutionary technology creates a virtual replica of your operations, allowing you to test and analyze scenarios risk-free.
+        In short, It’s a way to guarantee your strategies work in the real world and from the get-go.
+        </p>
+        <button className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</button>
+        </div>
+      </div>
+      <Services />
     </>
   );
 }

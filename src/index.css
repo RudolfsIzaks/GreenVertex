@@ -118,3 +118,22 @@ body {
 .blur-el {
   filter: blur(50px);
 }
+
+.left_align {
+  left: 27%;
+}
+
+.left_align_1 {
+  left: 30%;
+}
+
+.right_align_1 {
+  right: 28%;
+}
+.right_align {
+  right: 27%;
+}
+
+.expand_card {
+  opacity: 100%;
+}
