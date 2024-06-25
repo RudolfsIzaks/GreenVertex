@@ -73,16 +73,16 @@ const TabbedInterface = () => {
   }, [selectedTab]);
 
   return (
-    <div className="gap-0 pb-10 h-screen grid md:grid-cols-8 grid_cont justify-center">
-     <div className="grid_dummy"></div>
-     <div className="grid_dummy"></div>
-      <div className="container h-full col-start-3 col-span-4 button_grid">
-      <h2 className="relative z-10 text-headline-3 font-inter font-extrabold text-white p-3 text-center">These Issues are All Too Common In…</h2>
+    <div className="gap-0 pb-10 md:h-screen grid md:grid-cols-8 grid_cont justify-center">
+     <div className="grid_dummy md:block hidden"></div>
+     <div className="grid_dummy md:block hidden"></div>
+      <div className="container h-full md:col-start-3 md:col-span-4 col-span-8 button_grid">
+      <h2 className="relative z-10 md:text-headline-3 text-subheadline-3 font-inter font-extrabold text-white p-3 text-center">These Issues are All Too Common In…</h2>
         <div className="tabs flex w-full justify-center flex-wrap items-center px-4 pb-4 rounded-xl mt-4 gap-4">
           {tabData.map((tab, index) => (
             <button
               key={index}
-              className={`py-4 px-5 font-semibold w-auto rounded-full shadow-md focus:outline-none text-md text-white hover:scale-110 duration-200 hover:bg-green ${
+              className={`md:py-4 py-2 md:px-5 px-4 font-semibold w-auto rounded-full shadow-md focus:outline-none md:text-md text-sm md:scale-100 text-white hover:scale-110 duration-200 hover:bg-green ${
                 selectedTab.label === tab.label ? "bg-green text-white" : "bg-card"
               }`}
               onClick={() => setSelectedTab(tab)}
@@ -92,22 +92,22 @@ const TabbedInterface = () => {
           ))}
         </div>
       </div>
-      <div className="grid_dummy"></div>
-      <div className="grid_dummy"></div>
-      <div className="grid_dummy-bottom"></div>
-      <div className="grid_dummy-bottom"></div>
-      <div className="w-full flex flex-col justify-center items-start col-start-3 col-span-2 text_grid">
+      <div className="grid_dummy md:block hidden"></div>
+      <div className="grid_dummy md:block hidden"></div>
+      <div className="grid_dummy-bottom md:block hidden"></div>
+      <div className="grid_dummy-bottom md:block hidden"></div>
+      <div className="w-full flex flex-col justify-center items-start md:col-start-3 md:col-span-2 col-start-1 col-span-8 text_grid">
         <div className="content rounded-xl p-5">
           <h2 className="text-green text-subheadline-3 font-bold font-inter">{selectedTab.headline}</h2>
           <p className="mt-4 text-md font-inter font-semibold pr-20 text-white">{selectedTab.body}</p>
         </div>
       </div>
-      <div className="col-span-2 icon-grid flex justify-center items-center">
+      <div className="md:col-span-2 col-span-8 icon-grid md:flex justify-center items-center hidden">
         <img src={selectedTab.image} width="60%"/>
       </div>
-      <div className="grid_dummy-bottom col-span-2"></div>
-      <div className="grid_dummy-bottom col-span-2"></div>
-      <div className="progress-bars py-6 px-5 col-start-3 col-span-4 stats_grid">
+      <div className="grid_dummy-bottom col-span-2 md:block hidden"></div>
+      <div className="grid_dummy-bottom col-span-2 md:block hidden"></div>
+      <div className="progress-bars py-6 px-5 md:col-start-3 md:col-span-4 col-span-8 stats_grid">
           <h1 className="italic font-inter font-black text-white text-headline-3 mb-5">With <i className="text-green">Green Vertex</i></h1>
           {selectedTab.output > 0 && (
             <div className="mb-4">
@@ -132,8 +132,8 @@ const TabbedInterface = () => {
             </div>
           )}
         </div>
-        <div className="grid_dummy-bottom"></div>
-        <div className="grid_dummy-bottom"></div>
+        <div className="grid_dummy-bottom md:block hidden"></div>
+        <div className="grid_dummy-bottom md:block hidden"></div>
     </div>
   );
 };

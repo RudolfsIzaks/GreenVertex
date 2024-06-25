@@ -119,6 +119,8 @@ body {
   filter: blur(50px);
 }
 
+@media only screen and (min-width: 768px) {
+
 .left_align {
   left: 27%;
 }
@@ -137,3 +139,53 @@ body {
 .expand_card {
   opacity: 100%;
 }
+}
+
+@media only screen and (max-width: 1024px) {
+   .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 100;
+    background-color: #171717;
+    transition: 0.5s ease-in-out;
+    scale: 0;
+    opacity: 0;
+   }
+   .navbar ul {
+    width: 100%;
+   }
+
+   .navbar li {
+    width: 100%;
+    padding-inline: 10%;
+    padding-block: 5%;
+    transition: 0.5s ease-in-out;
+   }
+
+
+   .navbar > ul li:nth-child(4) {
+    background-color: #33AF53;
+   }
+
+   .nav_close {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+   }
+
+   .responsive_nav {
+    scale: 1;
+    opacity: 1;
+   }
+
+   .grid_cont {
+    grid-template-rows: 1fr 1fr 1fr;
+   }
+} 
