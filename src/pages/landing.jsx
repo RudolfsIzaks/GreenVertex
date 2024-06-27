@@ -9,6 +9,7 @@ import BG3D from "../assets/Green3DVertex.png";
 import Chris from '../assets/chris.jpg';
 import Services from "../components/services";
 import sim from '../assets/BG.gif';
+import GridBox from "../components/grid_points";
 
 function LandingPage() {
   useEffect(() => {
@@ -60,7 +61,7 @@ function LandingPage() {
         </h1>
         <div className="relative flex justify-center items-center rounded-md bg-background md:px-2 md:py-10 box-border md:w-1/2 overflow-hidden border select-none border-gray-600 mt-8 hover:rotate-3 duration-200">
           <div className="z-0 absolute blur-el w-32 h-32 top-0 left-0 bg-green rounded-full animate-pulse"></div>
-          <p className="z-10 text-white md:text-subheadline-3 font-inter md:w4/5 md:p-1 p-2 text-center">
+          <p className="z-10 text-white md:text-subheadline-3 font-inter md:w-4/5 md:p-1 p-2 text-center">
             78% of All Fortune 100 Companies Swear by This Complex, Yet
             Extremely Profitable Approach.
           </p>
@@ -101,7 +102,7 @@ function LandingPage() {
         <div className="md:w-2/3 mx-5 mb-5">
         <div className="absolute md:w-64 w-20 md:h-64 h-20 bg-lime-700 blur-3xl rounded-full animate-pulse z-0"></div>
         <p className="font-inter font-bold text-green">Now Revealing...</p>
-        <h1 className="font-inter relative z-10 font-black md:text-headline-2 text-subheadline-3 text-white md:w-4/5">
+        <h1 className="font-inter relative z-10 font-black md:text-headline-2 text-subheadline-3 text-white">
         The Secret Behind 78% Of Fortune 100 Companies Repeated Success
         </h1>
         <p className="mt-5 text-white font-inter md:w-2/3 z-10 relative leading-relaxed">
@@ -114,6 +115,12 @@ function LandingPage() {
         </div>
       </div>
       <Services />
+      <div className="flex flex-col justify-center md:items-center sm:gap-4 md:gap-4 md:my-20 sm:mx-5 h-screen">
+        <p className="text-green font-inter font-bold md:text-center text-left">Success isn't a secret; it's a strategy…</p>
+        <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl md:w-3/5 md:text-center leading-normal">The Fastest And Easiest Way To Guarantee Success!</h1>
+        <p className="text-white font-inter md:text-center md:w-2/3 md:mt-2 leading-relaxed">As a business leader, you understand the importance of swiftly boosting profits and cutting costs. After all, time is money, and poor operations drain your business's resources. Luckily, there are a few solutions. You can either gamble away with analyzing charts, risk testing in the real world for months, hope to get things magically right on the first go, or take a better route… </p>
+      </div>
+      <GridBox/>
     </>
   );
 }
