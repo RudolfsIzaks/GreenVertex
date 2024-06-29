@@ -22,12 +22,9 @@ function GridBox() {
           Free Until We Do!
         </h1>
         <p className="font-inter text-white mt-5 relative text-center">
-          Don’t gamble with your business’s future.
-          <br /> Choose Digital Twin Simulation and transform your operations
-          into a well-oiled machine. 
-          <br /> By virtually testing changes before implementation, you
-          eliminate the risk of costly errors and ensure that your strategies
-          will work. <br />
+          Imagine a future where every strategy you implement is tested, proven, and guaranteed to work—before you ever go live.
+          <br /> Those unbeatable odds of success are what make us so confident in our offer!
+          <br />
           <br />
           <b className="font-black">Here’s what we promise:</b>
         </p>
