@@ -14,7 +14,7 @@ const questions = [
       { text: "Energy and Utilities", icon: faBolt },
       { text: "Transportation", icon: faTruck },
       { text: "Fulfillment Centers", icon: faWarehouse },
-      { text: "Other"},
+      { text: "Other" },
     ],
   },
   {
@@ -87,12 +87,12 @@ function Qualify() {
 
   const sendEmail = () => {
     const emailData = {
-      email: 'recipient-email@example.com', // Replace with recipient's email
+      email: 'sales@mayhemagency.co', // Replace with recipient's email
       subject: 'Quiz Answers',
       message: `Quiz answers: ${JSON.stringify(answers)}`,
     };
 
-    axios.post('http://localhost:5000/send-email', emailData)
+    axios.post('https://greenvertexbackend-0c7a45e8c55a.herokuapp.com/send-email', emailData)
       .then(response => {
         console.log('Email sent successfully:', response.data);
       })
