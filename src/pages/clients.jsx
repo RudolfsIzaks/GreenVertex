@@ -87,7 +87,7 @@ function Qualify() {
 
   const sendEmail = () => {
     const emailData = {
-      email: 'sales@mayhemagency.co', // Replace with recipient's email
+      email: 'rudolfsizaks@gmail.com', // Replace with recipient's email
       subject: 'Quiz Answers',
       message: `Quiz answers: ${JSON.stringify(answers)}`,
     };
