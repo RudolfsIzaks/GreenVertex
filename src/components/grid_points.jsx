@@ -8,18 +8,23 @@ import { faArrowsAlt, faBolt, faChartBar, faChartLine, faChartSimple, faClock, f
 function GridBox() {
   return (
     <>
-      <div className="mx-5 md:px-32">
-        <p className="font-inter text-green font-semibold">
+      <div className="main_bg_grid relative">
+      <div className="absolute md:w-96 md:h-96 bg-teal-400 blur-3xl opacity-55 rounded-full left-[50%] z-0"></div>
+      <div className="absolute md:w-96 md:h-96 bg-lime-400 blur-3xl opacity-55 rounded-full left-[20%] top-[40%] z-0"></div>
+      <div className="absolute md:w-96 md:h-96 bg-green blur-3xl opacity-55 rounded-full z-0"></div>
+      <div className="absolute md:w-96 md:h-96 bg-cyan-300 blur-3xl opacity-55 rounded-full right-[20%] top-[40%] z-0"></div>
+      <div className="md:px-32 ">
+        <p className="relative font-inter text-green font-semibold z-10 md:text-center">
           Step up to where the best have already gone…
         </p>
-        <h1 className="font inter text-white font-black md:text-headline-2 md:w-2/3">
+        <h1 className="relative font-inter text-white font-black md:text-headline-2 md:text-center z-10">
           We Guarantee To Surpass Your Current System & Strategy, Or We Work For
           Free Until We Do!
         </h1>
-        <p className="font-inter text-white mt-5">
-          Don’t gamble with your business’s future. <br />
+        <p className="font-inter text-white mt-5 relative text-center">
+          Don’t gamble with your business’s future.
           <br /> Choose Digital Twin Simulation and transform your operations
-          into a well-oiled machine. <br />
+          into a well-oiled machine. 
           <br /> By virtually testing changes before implementation, you
           eliminate the risk of costly errors and ensure that your strategies
           will work. <br />
@@ -138,6 +143,7 @@ function GridBox() {
           </p>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
