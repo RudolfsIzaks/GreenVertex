@@ -70,6 +70,7 @@ function Qualify() {
   const [progress, setProgress] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [quizCompleted, setQuizCompleted] = useState(false);
 
   const handleAnswerClick = (answer) => {
     setAnswers([...answers, answer]);
@@ -80,14 +81,14 @@ function Qualify() {
       setProgress(((currentQuestion + 1) / questions.length) * 100);
     } else {
       // Handle the end of the quiz here
-      alert("Quiz Completed!");
+      setQuizCompleted(true);
       sendEmail();
     }
   };
 
   const sendEmail = () => {
     const emailData = {
-      email: 'recipient-email@example.com', // Replace with recipient's email
+      email: 'rudolfsizaks@gmail.com', // Replace with recipient's email
       subject: 'Quiz Answers',
       message: JSON.stringify(answers)
     };
@@ -108,6 +109,17 @@ function Qualify() {
   const handleInputSubmit = () => {
     handleAnswerClick(inputValue);
   };
+
+  if (quizCompleted) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4">
+        <div className="w-full max-w-md bg-card border border-stone-700 shadow-md rounded-lg p-6">
+          <h2 className="font-inter text-xl font-bold text-white mb-4">Thank You!</h2>
+          <p className="font-inter text-lg text-white">Your responses have been recorded. We will get back to you soon.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4">
