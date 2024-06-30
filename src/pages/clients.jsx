@@ -87,12 +87,12 @@ function Qualify() {
 
   const sendEmail = () => {
     const emailData = {
-      email: 'rudolfsizaks@gmail.com', // Replace with recipient's email
+      email: 'recipient-email@example.com', // Replace with recipient's email
       subject: 'Quiz Answers',
-      message: `Quiz answers: ${JSON.stringify(answers)}`,
+      message: JSON.stringify(answers)
     };
 
-    axios.post('https://green-vertexback-86f11d7eb251.herokuapp.com/send-email', emailData)
+    axios.post('https://your-app-name.herokuapp.com/send-email', emailData)
       .then(response => {
         console.log('Email sent successfully:', response.data);
       })
