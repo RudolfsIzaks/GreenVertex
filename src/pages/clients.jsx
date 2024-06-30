@@ -92,7 +92,7 @@ function Qualify() {
       message: JSON.stringify(answers)
     };
 
-    axios.post('https://your-app-name.herokuapp.com/send-email', emailData)
+    axios.post('https://green-vertexback-86f11d7eb251.herokuapp.com/send-email', emailData)
       .then(response => {
         console.log('Email sent successfully:', response.data);
       })
