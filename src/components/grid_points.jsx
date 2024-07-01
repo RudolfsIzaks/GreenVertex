@@ -13,8 +13,8 @@ function GridBox() {
       <div className="absolute md:w-96 md:h-96 bg-lime-400 blur-3xl opacity-55 rounded-full left-[20%] top-[40%] z-0"></div>
       <div className="absolute md:w-96 md:h-96 bg-green blur-3xl opacity-55 rounded-full z-0"></div>
       <div className="absolute md:w-96 md:h-96 bg-cyan-300 blur-3xl opacity-55 rounded-full right-[20%] top-[40%] z-0"></div>
-      <div className="md:px-32 ">
-        <p className="relative font-inter text-green font-semibold z-10 md:text-center">
+      <div className="md:px-32 mx-5">
+        <p className="relative font-inter text-green font-semibold z-10 text-center">
           Step up to where the best have already gone…
         </p>
         <h1 className="relative font-inter text-white font-black md:text-headline-2 md:text-center z-10">
