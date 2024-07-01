@@ -13,6 +13,7 @@ import sim from '../assets/sim_vertex.png';
 import GridBox from "../components/grid_points";
 import Growth from '../assets/image_growth.png';
 import Footer from "../components/footer";
+import Casestudy from "../components/casestudies";
 
 function LandingPage() {
   useEffect(() => {
@@ -97,7 +98,7 @@ function LandingPage() {
       </div>
       </div>
       <div className="relative md:px-32 h-screen flex md:flex-row flex-col-reverse justify-center items-center">
-      <div className="w-1/3 h-80 mx-5 z-10 bg-background bg_sim rounded-xl">
+      <div className="md:w-1/3 h-80 mx-5 z-10 bg-background bg_sim rounded-xl">
         </div>
         <div className="md:w-2/3 mx-5 mb-5">
         <div className="absolute md:w-64 w-20 md:h-64 h-20 bg-lime-700 blur-3xl rounded-full animate-pulse z-0"></div>
@@ -115,18 +116,18 @@ function LandingPage() {
         </div>
       </div>
       <Services />
-      <div className="flex md:items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 md:mb-48">
+      <div className="flex sm:flex-col md:items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 md:mb-48">
         <div className="bg-background rounded-xl z-10 p-5 w-3/5">
         <p className="text-green font-inter font-bold text-left z-10">Success isn't a secret; it's a strategy…</p>
         <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl leading-normal z-10">The Fastest And Easiest Way To Guarantee Success!</h1>
         <p className="text-white font-inter md:w-2/3 md:mt-2 leading-relaxed z-10">Boosting efficiency and cutting costs is critical. After all, time is money, and poor operations drain your business's resources. Luckily, there are a few solutions. You can either painstakingly analyze charts, risk testing in the real world for months, gamble with your intuition, or take a better route…</p>
         </div>
-        <div className="w-2/5">
+        <div className="md:w-2/5">
           <img src={Growth}  />
         </div>
       </div>
       <GridBox/>
-      <p className="text-white font-inter font-black text-headline-3 md:px-32 mt-10 text-center">But! Our risk-free offer isn’t meant for every business…</p>
+      <p className="text-white font-inter font-semibold text-headline-3 md:px-32 mt-10 text-center">But! Our risk-free offer isn’t meant for every business…</p>
       <div className="flex justify-center ">
       <button className="text-white font-inter font-black bg-green text-subheadline-4 p-4 px-6 rounded-md my-5 border border-green hover:bg-transparent hover:text-green hover:scale-110 transition">
         <NavLink to="/qualify">
@@ -134,6 +135,7 @@ function LandingPage() {
         </NavLink>
       </button>
       </div>
+      <Casestudy/>
       <Footer/>
     </>
   );
