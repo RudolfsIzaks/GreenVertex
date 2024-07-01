@@ -117,12 +117,12 @@ function LandingPage() {
       </div>
       <Services />
       <div className="flex sm:flex-col-reverse items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 md:mb-48">
-        <div className="bg-background rounded-xl z-10 p-5 md:w-3/5">
+        <div className="bg-background rounded-xl z-10 md:p-5 md:w-3/5">
         <p className="text-green font-inter font-bold text-left z-10">Success isn't a secret; it's a strategy…</p>
         <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl leading-normal z-10">The Fastest And Easiest Way To Guarantee Success!</h1>
         <p className="text-white font-inter md:w-2/3 md:mt-2 leading-relaxed z-10">Boosting efficiency and cutting costs is critical. After all, time is money, and poor operations drain your business's resources. Luckily, there are a few solutions. You can either painstakingly analyze charts, risk testing in the real world for months, gamble with your intuition, or take a better route…</p>
         </div>
-        <div className="md:w-2/5 sm:w-4/5">
+        <div className="md:w-2/5 sm:w-11/12">
           <img src={Growth}  />
         </div>
       </div>
