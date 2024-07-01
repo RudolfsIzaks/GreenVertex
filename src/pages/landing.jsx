@@ -122,7 +122,7 @@ function LandingPage() {
         <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl leading-normal z-10">The Fastest And Easiest Way To Guarantee Success!</h1>
         <p className="text-white font-inter md:w-2/3 md:mt-2 leading-relaxed z-10">Boosting efficiency and cutting costs is critical. After all, time is money, and poor operations drain your business's resources. Luckily, there are a few solutions. You can either painstakingly analyze charts, risk testing in the real world for months, gamble with your intuition, or take a better route…</p>
         </div>
-        <div className="md:w-2/5">
+        <div className="md:w-2/5 sm:w-4/5">
           <img src={Growth}  />
         </div>
       </div>
