@@ -13,15 +13,15 @@ function Casestudy() {
 
   return (
     <>
-      <div className="md:px-32 mt-20">
+      <div className="md:px-32 mt-20 sm:mx-5">
         <p className="italic text-green font-inter font-bold text-subheadline-3">
           Green Vertex Project
         </p>
-        <h1 className="text-white font-inter font-black text-headline-2 md:w-2/3">
+        <h1 className="text-white font-inter font-black md:text-headline-2 sm:text-subheadline-3 md:w-2/3 sm:my-5">
           Revolutionizing Healthcare Deliveries with Drones
         </h1>
       </div>
-      <div className="md:px-32 md:mt-10">
+      <div className="md:px-32 md:mt-10 sm:mx-5">
         <p className="text-stone-300">
           Apian was faced with a monumental challenge: <br />
           <br />
@@ -70,10 +70,10 @@ function Casestudy() {
             <h3 className="text-subheadline-3 text-white font-inter font-bold mt-10">
               Testimonial:
             </h3>
-            <div className="flex gap-4 bg-card border border-stone-600 rounded-xl p-10 items-center my-5">
-              <img src={apian} className="rounded-full md:w-32 md:h-32" />
+            <div className="flex sm:flex-col gap-4 bg-card border border-stone-600 rounded-xl p-10 md:items-center my-5">
+              <img src={apian} className="rounded-full md:w-32 md:h-32 w-24 h-24" />
               <div>
-                <p>
+                <p className="sm:text-sm">
                   “Chris from Green Vertex transformed our understanding of
                   simulation and digital twins. He delivered exceptional results
                   with a top-notch simulation, orchestrator, and visualization
@@ -85,7 +85,7 @@ function Casestudy() {
                   architecture. His dedication and professionalism make Chris
                   and Green Vertex an invaluable asset to any project.”
                 </p>
-                <p className="text-white font-black">
+                <p className="text-white font-black sm:mt-5">
                   Alexander Trewby, CEO - Apian
                 </p>
               </div>

@@ -116,7 +116,7 @@ function LandingPage() {
         </div>
       </div>
       <Services />
-      <div className="flex sm:flex-col-reverse items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 md:mb-48">
+      <div className="flex sm:flex-col-reverse items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 mb-48">
         <div className="bg-background rounded-xl z-10 md:p-5 md:w-3/5">
         <p className="text-green font-inter font-bold text-left z-10">Success isn't a secret; it's a strategy…</p>
         <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl leading-normal z-10">The Fastest And Easiest Way To Guarantee Success!</h1>
@@ -127,7 +127,7 @@ function LandingPage() {
         </div>
       </div>
       <GridBox/>
-      <p className="text-white font-inter font-semibold text-headline-3 md:px-32 mt-10 text-center">But! Our risk-free offer isn’t meant for every business…</p>
+      <p className="text-white font-inter font-semibold md:text-headline-3 sm:text-subheadline-4 md:px-32 mt-10 text-center">But! Our risk-free offer isn’t meant for every business…</p>
       <div className="flex justify-center ">
       <button className="text-white font-inter font-black bg-green text-subheadline-4 p-4 px-6 rounded-md my-5 border border-green hover:bg-transparent hover:text-green hover:scale-110 transition">
         <NavLink to="/qualify">

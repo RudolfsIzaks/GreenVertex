@@ -14,14 +14,14 @@ function GridBox() {
       <div className="absolute md:w-96 md:h-96 bg-green blur-3xl opacity-55 rounded-full z-0"></div>
       <div className="absolute md:w-96 md:h-96 bg-cyan-300 blur-3xl opacity-55 rounded-full right-[20%] top-[40%] z-0"></div>
       <div className="md:px-32 mx-5">
-        <p className="relative font-inter text-green font-semibold z-10 text-center">
+        <p className="relative font-inter text-green font-semibold z-10 text-center sm:text-sm">
           Step up to where the best have already gone…
         </p>
-        <h1 className="relative font-inter text-white font-black md:text-headline-2 md:text-center z-10">
+        <h1 className="relative font-inter text-white font-black md:text-headline-2 text-center z-10">
           We Guarantee To Surpass Your Current System & Strategy, Or We Work For
           Free Until We Do!
         </h1>
-        <p className="font-inter text-white mt-5 relative text-center">
+        <p className="font-inter text-white mt-5 relative text-center sm:text-sm">
           Imagine a future where every strategy you implement is tested, proven, and guaranteed to work—before you ever go live.
           <br /> Those unbeatable odds of success are what make us so confident in our offer!
           <br />
@@ -29,7 +29,7 @@ function GridBox() {
           <b className="font-black">Here’s what we promise:</b>
         </p>
       </div>
-      <div className="grid md:grid-cols-5 md:grid-rows-2 md:px-32 mt-20">
+      <div className="grid md:grid-cols-5 md:grid-rows-2 md:px-32 md:mt-20 sm:mt-5">
         <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
           
           <FontAwesomeIcon icon={faDollarSign} className="text-5xl text-green"/>

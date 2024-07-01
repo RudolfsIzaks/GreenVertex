@@ -7,12 +7,12 @@ function Footer() {
 
     return(
         <>
-          <div className="flex items-center justify-between h-[40vh] md:px-24 bg-black mt-32">
+          <div className="flex sm:flex-col items-center justify-between md:h-[40vh] md:px-24 bg-black mt-32">
             <div>
-                <img src={vertex} alt="vertex logo" className="md:w-64" />
+                <img src={vertex} alt="vertex logo" className="md:w-64 sm:w-48" />
             </div>
             <div>
-            <ul className="md:flex items-center gap-8 font-inter font-bold text-sm text-white">
+            <ul className="flex sm:flex-wrap sm:justify-center sm:my-5 items-center gap-8 font-inter font-bold text-sm text-white">
                     <li className="">
                         <NavLink to="/clients" className="hover:text-green duration-200">
                           CLIENTS
