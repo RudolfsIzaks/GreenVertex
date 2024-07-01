@@ -116,7 +116,7 @@ function LandingPage() {
         </div>
       </div>
       <Services />
-      <div className="flex sm:flex-col md:items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 md:mb-48">
+      <div className="flex sm:flex-col-reverse items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 md:mb-48">
         <div className="bg-background rounded-xl z-10 p-5 md:w-3/5">
         <p className="text-green font-inter font-bold text-left z-10">Success isn't a secret; it's a strategy…</p>
         <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl leading-normal z-10">The Fastest And Easiest Way To Guarantee Success!</h1>
