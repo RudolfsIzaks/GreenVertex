@@ -89,7 +89,7 @@ function LandingPage() {
           sought to craft a new and better route…</i>
         </p>
       </div>
-      <div className="flex flex-col gap-5 justify-center md:flex-grow w-full">
+      <div className="flex flex-col gap-5 justify-center md:flex-grow sm:w-full">
         <div data-aos="flip-right" className="bg-card p-5 flex items-center gap-6 text-left sm:flex-col sm:text-center rounded-xl border border-gray-800">
           <img src={Chris} alt="Chris Green Vertex" className="rounded-full w-32" />
           <div>
