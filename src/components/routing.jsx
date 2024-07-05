@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import App from '../App';
 import '../index.css';
 import Qualify from '../pages/clients';
+import Booking from './booking';
 
 
 function RouterSetup() {
@@ -11,6 +12,7 @@ function RouterSetup() {
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/qualify" element={<Qualify/>} />
+                <Route path="/booking" element={<Booking/>} />
             </Routes>
         </Router>
     );
