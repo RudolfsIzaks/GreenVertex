@@ -15,6 +15,7 @@ import Growth from '../assets/image_growth.png';
 import Footer from "../components/footer";
 import Casestudy from "../components/casestudies";
 import Laurence from '../assets/laurence.jpg';
+import FAQ from "../components/faq";
 
 function LandingPage() {
   useEffect(() => {
@@ -147,6 +148,7 @@ function LandingPage() {
       </button>
       </div>
       <Casestudy/>
+      <FAQ/>
       <Footer/>
     </>
   );
