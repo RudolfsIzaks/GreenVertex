@@ -12,7 +12,7 @@ function Questions() {
 
     return(
         <>
-          <div className="relative w-auto flex flex-col justify-center items-center question_tab md:gap-0 gap-5 mb-48 md:mt-12 px-10">
+          <div className="relative w-auto flex flex-col justify-center items-center question_tab md:gap-0 gap-5 mb-48 md:mt-12 px-10" id="down">
             <div className="absolute md:blur-3xl blur-2xl bg-emerald-400 md:w-80 w-20 md:h-96 h-48 top-1/2 rounded-full z-0"></div>
             <div className="absolute md:blur-3xl blur-2xl bg-lime-400 md:w-64 w-20 md:h-64 h-48 left-1/2 rounded-full z-0"></div>
             <div className="absolute md:blur-3xl blur-2xl bg-green md:w-64 w-20 md:h-64 h-48 right-1/2 rounded-full z-0"></div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NavBar from "../components/navBar";
 import "../index.css";
 import TabbedInterface from "../components/tabs";
@@ -40,7 +40,7 @@ function LandingPage() {
               Discover the proven strategy that will reduce costs and have your
               business operation at 110%
             </p>
-            <button className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</button>
+            <a href="#down" className="py-2 px-8 bg-green text-white mt-10 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</a>
           </div>
           <div className="absolute z-0 top-24 right-10 md:top-auto md:bottom-auto md:w-1/2">
             <img src={BG3D} alt="" />
@@ -96,7 +96,7 @@ function LandingPage() {
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white sm:text-center">Chris Brett</h2>
           <p className="text-gray-300 sm:text-center">CTO, Founder, Head of Engineering</p>
-          <button className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</button>
+          <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-20 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
           </div>
         </div>
         <div data-aos="flip-right" className="bg-card p-5 flex items-center gap-6 text-left sm:flex-col sm:text-center rounded-xl border border-gray-800">
@@ -104,7 +104,7 @@ function LandingPage() {
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white text-left sm:text-center">Laurence Hole</h2>
           <p className="text-gray-300 sm:text-center">Founder</p>
-          <button className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</button>
+          <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ function LandingPage() {
         This revolutionary technology creates a virtual replica of your operations, allowing you to test and analyze scenarios risk-free.
         In short, It’s a way to guarantee your strategies work in the real world and from the get-go.
         </p>
-        <button className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</button>
+        <Link to="/qualify" className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</Link>
         </div>
       </div>
       <Services />
