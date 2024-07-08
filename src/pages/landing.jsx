@@ -36,7 +36,7 @@ function LandingPage() {
             <h1 className="text-white md:text-headline-2 font-inter font-black md:text-left text-subheadline-4 md:my-1 my-5 text-center">
               Slash Costs, Eliminate Inefficiencies & Uplift Profitability!
             </h1>
-            <p className="text-white md:text-md font-inter mt-2 md:w-96 text-sm text-center md:text-left">
+            <p className="text-white md:text-md font-inter mt-2 mb-5 md:w-96 text-sm text-center md:text-left">
               Discover the proven strategy that will reduce costs and have your
               business operation at 110%
             </p>
@@ -95,15 +95,15 @@ function LandingPage() {
           <img src={Chris} alt="Chris Green Vertex" className="rounded-full w-32" />
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white sm:text-center">Chris Brett</h2>
-          <p className="text-gray-300 sm:text-center">CTO, Founder, Head of Engineering</p>
-          <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-20 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
+          <p className="text-gray-300 sm:text-center mb-4">CTO, Founder, Head of Engineering</p>
+          <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
           </div>
         </div>
         <div data-aos="flip-right" className="bg-card p-5 flex items-center gap-6 text-left sm:flex-col sm:text-center rounded-xl border border-gray-800">
           <img src={Laurence} alt="Laurence Green Vertex" className="rounded-full w-32" />
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white text-left sm:text-center">Laurence Hole</h2>
-          <p className="text-gray-300 sm:text-center">Founder</p>
+          <p className="text-gray-300 sm:text-center mb-4">Founder</p>
           <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
           </div>
         </div>
@@ -118,7 +118,7 @@ function LandingPage() {
         <h1 className="font-inter relative z-10 font-black md:text-headline-3 text-subheadline-3 text-white">
         The Secret Behind 78% Of Fortune 100 Companies Repeated Success
         </h1>
-        <p className="mt-5 text-white font-inter z-10 relative leading-relaxed">
+        <p className="mt-5 text-white font-inter z-10 relative leading-relaxed mb-5">
         For nearly a decade, we've helped industry giants save millions with our Digital Twin Simulation.
 
         This revolutionary technology creates a virtual replica of your operations, allowing you to test and analyze scenarios risk-free.
