@@ -5,10 +5,15 @@ import "../index.css";
 import apian from "../assets/testimonial_apian.webp";
 
 function Casestudy() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded1, setIsExpanded1] = useState(false);
+  const [isExpanded2, setIsExpanded2] = useState(false);
 
-  const handleToggle = () => {
-    setIsExpanded(!isExpanded);
+  const handleToggle1 = () => {
+    setIsExpanded1(!isExpanded1);
+  };
+
+  const handleToggle2 = () => {
+    setIsExpanded2(!isExpanded2);
   };
 
   return (
@@ -31,13 +36,13 @@ function Casestudy() {
           And with significant demand and even larger weather constraints, they
           had their work cut out for them…
         </p>
-        {isExpanded && (
+        {isExpanded1 && (
           <div className="text-stone-300 mt-5 font-inter">
             <p className="text-subheadline-3 text-yellow-300 font-inter font-bold">
               Apian needed answers (fast):
             </p>
             <ul className="mt-5">
-              <li>How many drones?</li>
+              <li>Where to optimally locate the drone depots?</li>
               <li>How do we adapt to unyielding weather?</li>
               <li>How do we achieve lightning-fast delivery?</li>
             </ul>
@@ -93,10 +98,70 @@ function Casestudy() {
           </div>
         )}
         <button
-          onClick={handleToggle}
+          onClick={handleToggle1}
           className="mt-3 py-2 text-white rounded-lg font-inter font-black transition text-subheadline-3"
         >
-          {isExpanded ? (
+          {isExpanded1 ? (
+            <>
+              Read Less <FontAwesomeIcon icon={faChevronUp} />
+            </>
+          ) : (
+            <>
+              Read More <FontAwesomeIcon icon={faChevronDown} />
+            </>
+          )}
+        </button>
+      </div>
+
+      <div className="md:px-32 mt-20 sm:mx-5">
+        <p className="italic text-green font-inter font-bold text-subheadline-3">
+          Green Vertex Project
+        </p>
+        <h1 className="text-white font-inter font-black md:text-headline-2 sm:text-subheadline-3 md:w-2/3 sm:my-5">
+          Transforming Fulfillment with Digital Twin Simulation
+        </h1>
+      </div>
+      <div className="md:px-32 md:mt-10 sm:mx-5">
+        <p className="text-stone-300">
+          Ocado Technology, a leader in online grocery fulfillment, was looking to create a cutting-edge robotics-based storage and retrieval system ("The Hive"). <br />
+          <br />
+          Success would mean a breakthrough for their business. <br />
+          <br />
+          But, Ocado faced two major challenges: <br />
+          <br />
+          Creating a multi-swarm robotics system requires clever solutions and intricate coordination. <br />
+          Developing advanced simulations to predict performance and optimize layouts was no small feat.
+        </p>
+        {isExpanded2 && (
+          <div className="text-stone-300 mt-5 font-inter">
+            <p className="text-subheadline-3 text-yellow-300 font-inter font-bold">
+              Enter our Leading Engineers.
+            </p>
+            <p>We revolutionized Ocado’s operations by enhancing simulations.</p>
+            <p>These simulations made assessing business opportunities seamless.</p>
+            <p>Predicting throughput and optimizing warehouse layouts became straightforward.</p>
+            <h3 className="text-subheadline-3 text-white font-inter font-bold mt-10">
+              The Results?
+            </h3>
+            <p>
+              Our engineers invented and merged robotic picking with a new swarm storage system… 
+            </p>
+            <p>
+              Creating an unbeatable standard for Ocado’s breakthrough “on-grid” picking system.
+            </p>
+            <p>
+              With laser-precise simulations, a bold idea became a highly profitable operation.
+            </p>
+            <p>
+              The payoff? Unparalleled efficiency, transforming Ocados operations, forever…
+            </p>
+          </div>
+        )}
+        <button
+          onClick={handleToggle2}
+          className="mt-3 py-2 text-white rounded-lg font-inter font-black transition text-subheadline-3"
+        >
+          {isExpanded2 ? (
             <>
               Read Less <FontAwesomeIcon icon={faChevronUp} />
             </>

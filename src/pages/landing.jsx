@@ -37,8 +37,7 @@ function LandingPage() {
               Slash Costs, Eliminate Inefficiencies & Uplift Profitability!
             </h1>
             <p className="text-white md:text-md font-inter mt-2 mb-5 md:w-96 text-sm text-center md:text-left">
-              Discover the proven strategy that will reduce costs and have your
-              business operation at 110%
+              Transforming your operations into well-oiled machine is what we do best.
             </p>
             <a href="#down" className="py-2 px-8 bg-green text-white mt-10 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</a>
           </div>

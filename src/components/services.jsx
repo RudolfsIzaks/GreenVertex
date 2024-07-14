@@ -25,7 +25,7 @@ function Services() {
                         Experience risk-free testing across all facets of your business…
                     </p>
                     <h1 className="font-inter md:text-headline-2 text-subheadline-4 font-black text-white my-5 md:text-center text-left">
-                        Simulate Any Process: From Production to Customer Service to Future Strategies
+                        Simulate Any Process: From A Mere Idea to Complex Physical Operations
                     </h1>
                     <p className="font-inter md:text-subheadline-4 text-white font-light my-2 md:w-2/3 md:text-center text-left">
                         With Digital Twin Simulation, you can run simulations for nearly any aspect of your business. Whether it's planning a future campaign, optimizing a complex process, or testing a new strategy.{" "}
