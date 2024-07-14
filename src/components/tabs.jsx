@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import '../index.css';
 import manufacturing from '../assets/manufacturing.png';
 import logistics from '../assets/logistics.png';
@@ -56,6 +58,14 @@ const tabData = [
     savings: 40,
     image: fulfillment
   },
+  {
+    label: "Other",
+    headline: "",
+    body: "",
+    output: 0,
+    savings: 0,
+    image: ""
+  }
 ];
 
 const TabbedInterface = () => {
@@ -72,12 +82,40 @@ const TabbedInterface = () => {
     }, 100);
   }, [selectedTab]);
 
+  const handleOtherButtonClick = () => {
+    const MySwal = withReactContent(Swal);
+
+    MySwal.fire({
+      title: '<span style="color: white;">Simulation Modeling is not just for one or two business types!</span>',
+      html: '<p style="color: #b0b0b0;">If you\'re looking to explore its benefits for your unique operations, we\'re here to help.</p>',
+      icon: 'success',
+      iconColor: '#33AF53',
+      confirmButtonText: '<span style="color: white;">See If You Qualify</span>',
+      background: '#212121',
+      confirmButtonColor: '#33AF53',
+      showCancelButton: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirect to the desired page
+        window.location.href = '/qualify'; // Replace with the desired URL
+      }
+    });
+  };
+
+  const handleTabClick = (tab) => {
+    if (tab.label === "Other") {
+      handleOtherButtonClick();
+    } else {
+      setSelectedTab(tab);
+    }
+  };
+
   return (
     <div className="gap-0 pb-10 md:h-screen grid md:grid-cols-8 grid_cont justify-center">
-     <div className="grid_dummy md:block hidden"></div>
-     <div className="grid_dummy md:block hidden"></div>
+      <div className="grid_dummy md:block hidden"></div>
+      <div className="grid_dummy md:block hidden"></div>
       <div className="container h-full md:col-start-3 md:col-span-4 col-span-8 button_grid">
-      <h2 className="relative z-10 md:text-headline-3 text-subheadline-3 font-inter font-extrabold text-white p-3 text-center">These Issues are All Too Common In…</h2>
+        <h2 className="relative z-10 md:text-headline-3 text-subheadline-3 font-inter font-extrabold text-white p-3 text-center">These Issues are All Too Common In…</h2>
         <div className="tabs flex w-full justify-center flex-wrap items-center px-4 pb-4 rounded-xl mt-4 gap-4">
           {tabData.map((tab, index) => (
             <button
@@ -85,7 +123,7 @@ const TabbedInterface = () => {
               className={`md:py-4 py-2 md:px-5 px-4 font-semibold w-auto rounded-full shadow-md focus:outline-none md:text-md text-sm md:scale-100 text-white hover:scale-110 duration-200 hover:bg-green ${
                 selectedTab.label === tab.label ? "bg-green text-white" : "bg-card"
               }`}
-              onClick={() => setSelectedTab(tab)}
+              onClick={() => handleTabClick(tab)}
             >
               {tab.label}
             </button>
@@ -103,37 +141,37 @@ const TabbedInterface = () => {
         </div>
       </div>
       <div className="md:col-span-2 col-span-8 icon-grid md:flex justify-center items-center hidden">
-        <img src={selectedTab.image} width="60%"/>
+        {selectedTab.image && <img src={selectedTab.image} width="60%"/>}
       </div>
       <div className="grid_dummy-bottom col-span-2 md:block hidden"></div>
       <div className="grid_dummy-bottom col-span-2 md:block hidden"></div>
       <div className="progress-bars py-6 px-5 md:col-start-3 md:col-span-4 col-span-8 stats_grid">
-          <h1 className="italic font-inter font-black text-white text-headline-3 mb-5">With <i className="text-green">Green Vertex</i></h1>
-          {selectedTab.output > 0 && (
-            <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white mb-3">Potential Output: <i className="text-green font-black font-inter">+{selectedTab.output}%</i></h3>
-              <div className="relative w-full h-3 bg-card rounded-full overflow-hidden">
-                <div
-                  className="absolute top-0 left-0 h-3 bg-green rounded-full transition-all duration-500 ease-out"
-                  style={{ width: `${outputWidth}%` }}
-                ></div>
-              </div>
+        <h1 className="italic font-inter font-black text-white text-headline-3 mb-5">With <i className="text-green">Green Vertex</i></h1>
+        {selectedTab.output > 0 && (
+          <div className="mb-4">
+            <h3 className="text-xl font-semibold text-white mb-3">Potential Output: <i className="text-green font-black font-inter">+{selectedTab.output}%</i></h3>
+            <div className="relative w-full h-3 bg-card rounded-full overflow-hidden">
+              <div
+                className="absolute top-0 left-0 h-3 bg-green rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${outputWidth}%` }}
+              ></div>
             </div>
-          )}
-          {selectedTab.savings > 0 && (
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-3">Potential Savings: <i className="text-green font-black font-inter"> -{selectedTab.savings}%</i></h3>
-              <div className="relative w-full h-3 bg-red-500 rounded-full overflow-hidden">
-                <div
-                  className="absolute  left-0 h-3 bg-green rounded-full transition-all duration-500 ease-out"
-                  style={{ width: `${100 - savingsWidth}%` }}
-                ></div>
-              </div>
+          </div>
+        )}
+        {selectedTab.savings > 0 && (
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-3">Potential Savings: <i className="text-green font-black font-inter"> -{selectedTab.savings}%</i></h3>
+            <div className="relative w-full h-3 bg-red-500 rounded-full overflow-hidden">
+              <div
+                className="absolute  left-0 h-3 bg-green rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${100 - savingsWidth}%` }}
+              ></div>
             </div>
-          )}
-        </div>
-        <div className="grid_dummy-bottom md:block hidden"></div>
-        <div className="grid_dummy-bottom md:block hidden"></div>
+          </div>
+        )}
+      </div>
+      <div className="grid_dummy-bottom md:block hidden"></div>
+      <div className="grid_dummy-bottom md:block hidden"></div>
     </div>
   );
 };
