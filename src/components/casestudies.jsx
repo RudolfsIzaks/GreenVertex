@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import "../index.css";
 import apian from "../assets/testimonial_apian.webp";
+import apianLogo from '../assets/apian.png'
+import ocadoLogo from '../assets/ocado.webp'
 
 function Casestudy() {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -18,23 +20,12 @@ function Casestudy() {
 
   return (
     <>
+    <hr className="opacity-10 mt-10"/>
       <div className="md:px-32 mt-20 sm:mx-5">
-        <p className="italic text-green font-inter font-bold text-subheadline-3">
-          Green Vertex Project: <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.0007 0 300 85.15" viewBox="-0.0007 0 300 85.15" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
-    <g>
-        <path d="M4.42 116.99 0 246.56c-.14 4.06 4.71 5.71 6.68 2.27L138.44 19.68c2-3.46-1.51-7.57-4.79-5.62L26.56 77.85C13.4 85.68 4.99 100.57 4.42 116.99Z" fill="#ffc03a" data-color="1"></path>
-        <path d="M314.58 116.99 319 246.56c.14 4.06-4.71 5.71-6.68 2.27L180.56 19.68c-2-3.46 1.51-7.57 4.79-5.62l107.09 63.79c13.16 7.83 21.57 22.72 22.14 39.14Z" fill="#ffc03a" data-color="1"></path>
-        <path d="M287.2 277.1H31.88c-5 0-6.72 7.35-2.31 10l111.26 66.27a36.17 36.17 0 0 0 37.41 0L289.5 287.1c4.41-2.64 2.71-10-2.3-10Z" fill="#ffc03a" data-color="1"></path>
-        <path d="M1223.21 89.68q29.49 0 45.76 19.19t16.27 51.93v123.41h-40.47V168.7q0-19.56-8.52-29.73t-24-10.15q-17.79 0-28.55 14.29T1172.92 183v101.21h-40.09V93.82h34.79l3 25.59q15.88-29.73 52.59-29.73Z" fill="#ffffff" data-color="2"></path>
-        <path d="M488.39 89.68q34 0 53 17.88t18.91 51.35v125.3h-35.6l-1.89-24.84q-17 29-56.35 29-26.1 0-41.61-14.67t-15.5-39.5q0-45.52 56-56.06l54.46-9.79v-8.65q0-34.25-31.39-34.24-15.12 0-24.77 8.28t-9.64 21.82h-39q1.14-28.21 21.18-47t52.2-18.88Zm31.39 115.51v-6.77l-45.76 9.78q-24.21 4.9-24.21 24.08 0 9.8 6.81 15.62t19.29 5.83q23.07 0 34.8-18.44 9.08-12.78 9.07-30.1Z" fill="#ffffff" data-color="2"></path>
-        <path d="M826.5 93.82h40.09v190.39H826.5Z" fill="#ffffff" data-color="2"></path>
-        <path d="M699.24 89.68q39.33 0 64.29 28.6 25 28.22 25 70.73t-25.38 71.09q-24.95 28.22-63.91 28.21-20.44 0-36.31-7.71t-24.2-20.13V365.1h-40.48V93.82h35.18l2.64 27.1q21.18-31.23 63.17-31.24Zm-7.2 37.63q-21.56 0-38.19 16.55-16.26 16.18-16.27 43.65v2.26q.76 27.84 16.27 44.4 16.64 16.54 37.82 16.55 24.2 0 39.33-17.31 15.9-17.68 15.89-44.4 0-27.45-15.32-44.58t-39.53-17.12Z" fill="#ffffff" data-color="2"></path>
-        <path d="M993.5 89.68q41.2 0 63.53 31.24l2.66-27.1h35.17v190.39h-35.17l-2.66-26.72q-21.56 30.86-63.53 30.85-39 0-63.91-28.21-25-28.59-25-71.12t25-70.73q24.91-28.59 63.91-28.6Zm7.18 37.63q-24.21 0-39.33 17.12t-15.13 44.58q0 27.48 15.13 44.59t39.33 17.12q22.32 0 38.21-16.18 16.26-16.17 16.26-44v-3q0-27.46-16.26-43.65-16.7-16.57-38.25-16.58Z" fill="#ffffff" data-color="2"></path>
-        <path fill="#ffc03a" d="M820.81 14.71v29.41l26 14.7 25.99-14.7V14.71L846.81 0l-26 14.71z" data-color="1"></path>
-    </g>
-</svg>
-
-        </p>
+        <div className="flex items-center justify-start gap-3 italic text-[#FEC039] font-inter font-bold text-subheadline-3 mb-8">
+          Green Vertex Project: 
+          <img src={apianLogo} alt="apian logo" className="w-36" />
+        </div>
         <h1 className="text-white font-inter font-black md:text-headline-2 sm:text-subheadline-3 md:w-2/3 sm:my-5">
           Revolutionizing Healthcare Deliveries with Drones
         </h1>
@@ -125,11 +116,12 @@ function Casestudy() {
           )}
         </button>
       </div>
-
+      <hr className="opacity-10 mt-10"/>
       <div className="md:px-32 mt-20 sm:mx-5">
-        <p className="italic text-green font-inter font-bold text-subheadline-3">
-          Green Vertex Project
-        </p>
+      <div className="flex items-center justify-start gap-3 italic text-[#4C216D] font-inter font-bold text-subheadline-3 mb-8">
+          Green Vertex Project: 
+          <img src={ocadoLogo} alt="apian logo" className="w-36" />
+        </div>
         <h1 className="text-white font-inter font-black md:text-headline-2 sm:text-subheadline-3 md:w-2/3 sm:my-5">
           Transforming Fulfillment with Digital Twin Simulation
         </h1>
@@ -185,6 +177,7 @@ function Casestudy() {
           )}
         </button>
       </div>
+      <hr className="opacity-10 mt-10"/>
     </>
   );
 }
