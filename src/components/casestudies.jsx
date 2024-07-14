@@ -20,7 +20,7 @@ function Casestudy() {
     <>
       <div className="md:px-32 mt-20 sm:mx-5">
         <p className="italic text-green font-inter font-bold text-subheadline-3">
-          Green Vertex Project: <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.003 0 1285.243 365.1" viewBox="-0.003 0 1285.243 365.1" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
+          Green Vertex Project: <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.0007 0 300 85.15" viewBox="-0.0007 0 300 85.15" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
     <g>
         <path d="M4.42 116.99 0 246.56c-.14 4.06 4.71 5.71 6.68 2.27L138.44 19.68c2-3.46-1.51-7.57-4.79-5.62L26.56 77.85C13.4 85.68 4.99 100.57 4.42 116.99Z" fill="#ffc03a" data-color="1"></path>
         <path d="M314.58 116.99 319 246.56c.14 4.06-4.71 5.71-6.68 2.27L180.56 19.68c-2-3.46 1.51-7.57 4.79-5.62l107.09 63.79c13.16 7.83 21.57 22.72 22.14 39.14Z" fill="#ffc03a" data-color="1"></path>
