@@ -149,6 +149,7 @@ function LandingPage() {
       <Casestudy/>
       <FAQ/>
       <Footer/>
+      <p className="italic text-xs text-stone-500 text-center">All Rights Reserved Green Vertex. 2024</p>
     </>
   );
 }
