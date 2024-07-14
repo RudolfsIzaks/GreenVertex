@@ -95,7 +95,7 @@ function LandingPage() {
           <img src={Chris} alt="Chris Green Vertex" className="rounded-full w-32" />
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white sm:text-center">Chris Brett</h2>
-          <p className="text-gray-300 sm:text-center mb-4">CTO, Founder, Head of Engineering</p>
+          <p className="text-gray-300 sm:text-center mb-4">CEO, Co-Founder</p>
           <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
           </div>
         </div>
@@ -103,7 +103,7 @@ function LandingPage() {
           <img src={Laurence} alt="Laurence Green Vertex" className="rounded-full w-32" />
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white text-left sm:text-center">Laurence Hole</h2>
-          <p className="text-gray-300 sm:text-center mb-4">Founder</p>
+          <p className="text-gray-300 sm:text-center mb-4">CTO, Co-Founder</p>
           <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
           </div>
         </div>
