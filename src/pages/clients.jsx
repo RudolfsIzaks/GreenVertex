@@ -24,6 +24,7 @@ const questions = [
   },
   {
     question: "What are the primary challenges your business is currently facing?",
+    type: "multiple",
     answers: [
       { text: "Bottlenecks in production" },
       { text: "Inefficiencies in logistics and supply chain" },
@@ -36,6 +37,7 @@ const questions = [
   },
   {
     question: "What are your goals for optimizing your operations?",
+    type: "multiple",
     answers: [
       { text: "Reduce operational costs" },
       { text: "Increase throughput and efficiency" },
@@ -72,10 +74,14 @@ function Qualify() {
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [selectedAnswers, setSelectedAnswers] = useState([]);
 
   const handleAnswerClick = (answer) => {
-    setAnswers([...answers, answer]);
+    const newAnswers = [...answers];
+    newAnswers[currentQuestion] = answer;
+    setAnswers(newAnswers);
     setInputValue(""); // Clear input field
+    setSelectedAnswers([]); // Clear selected answers
 
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -89,7 +95,7 @@ function Qualify() {
 
   const sendEmail = () => {
     const emailData = {
-      email: 'markojanevski.off@gmail.com', // Replace with recipient's email
+      email: 'rudolfsizaks@gmail.com', // Replace with recipient's email
       subject: 'Quiz Answers',
       message: JSON.stringify(answers)
     };
@@ -109,6 +115,25 @@ function Qualify() {
 
   const handleInputSubmit = () => {
     handleAnswerClick(inputValue);
+  };
+
+  const handleCheckboxChange = (event, answer) => {
+    if (event.target.checked) {
+      setSelectedAnswers([...selectedAnswers, answer]);
+    } else {
+      setSelectedAnswers(selectedAnswers.filter((a) => a !== answer));
+    }
+  };
+
+  const handleMultipleSubmit = () => {
+    handleAnswerClick(selectedAnswers.join(', '));
+  };
+
+  const handleBackClick = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+      setProgress(((currentQuestion - 1) / questions.length) * 100);
+    }
   };
 
   if (quizCompleted) {
@@ -164,6 +189,26 @@ function Qualify() {
                   Submit
                 </button>
               </div>
+            ) : questions[currentQuestion].type === "multiple" ? (
+              <div>
+                {questions[currentQuestion].answers.map((answer, index) => (
+                  <div key={index} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={`answer-${index}`}
+                      className="mr-3"
+                      onChange={(e) => handleCheckboxChange(e, answer.text)}
+                    />
+                    <label htmlFor={`answer-${index}`} className="text-white">{answer.text}</label>
+                  </div>
+                ))}
+                <button
+                  onClick={handleMultipleSubmit}
+                  className="mt-3 p-3 bg-green text-white rounded-lg hover:bg-emerald-500 transition"
+                >
+                  Submit
+                </button>
+              </div>
             ) : (
               questions[currentQuestion].answers.map((answer, index) => (
                 <button
@@ -177,6 +222,14 @@ function Qualify() {
               ))
             )}
           </div>
+          {currentQuestion > 0 && (
+            <button
+              onClick={handleBackClick}
+              className="mt-3 p-3 bg-stone-700 text-white rounded-lg hover:bg-stone-600 transition"
+            >
+              Back
+            </button>
+          )}
         </div>
       </div>
     </div>

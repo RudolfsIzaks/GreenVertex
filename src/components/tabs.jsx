@@ -11,14 +11,6 @@ import fulfillment from '../assets/fulfillment.png';
 
 const tabData = [
   {
-    label: "Manufacturing",
-    headline: "Bottlenecks slowing you down?",
-    body: "Imagine eliminating them and running at full speed without disruptions, boosting your through-put by 43%!",
-    output: 43,
-    savings: 0,
-    image: manufacturing
-  },
-  {
     label: "Logistics and Supply Chain",
     headline: "Unpredictable delays causing headaches?",
     body: "What if you could foresee and prevent them, ensuring smooth operations, happy clients, all the while reducing costs by 15% to 40%?",
@@ -27,28 +19,12 @@ const tabData = [
     image: logistics
   },
   {
-    label: "Transportation",
-    headline: "Traffic jams and scheduling chaos?",
-    body: "What if you could ensure smooth traffic flow and perfect schedules, enhancing punctuality and service quality by 20-40%?",
-    output: 40, 
-    savings: 0,
-    image: transportation
-  },
-  {
     label: "Retail and Online Grocers",
     headline: "Stockouts and delivery inefficiencies hurting profits?",
     body: "Imagine the perfect inventory management and streamlined delivery processes that reduces labor, inventory and delivery costs by 10-30% each!",
     output: 0, 
     savings: 30,
     image: retail
-  },
-  {
-    label: "Energy and Utilities",
-    headline: "Struggling with demand predictions?",
-    body: "Envision accurate forecasts and optimal resource allocation, cutting waste by 10%-20% and saving on operational costs by 10-30%!",
-    output: 0, 
-    savings: 30,
-    image: energy
   },
   {
     label: "Fulfillment Centers",
@@ -86,8 +62,8 @@ const TabbedInterface = () => {
     const MySwal = withReactContent(Swal);
 
     MySwal.fire({
-      title: '<span style="color: white;">Simulation Modeling is not just for one or two business types!</span>',
-      html: '<p style="color: #b0b0b0;">If you\'re looking to explore its benefits for your unique operations, we\'re here to help.</p>',
+      title: '<span style="color: white;">Curious if we can help your business...</span>',
+      html: '<p style="color: #b0b0b0;">Drastically reduce costs, Uplift profitability, Maximize output and resource allocation?</p>',
       icon: 'success',
       iconColor: '#33AF53',
       confirmButtonText: '<span style="color: white;">See If You Qualify</span>',
