@@ -55,14 +55,14 @@ function LandingPage() {
       <TabbedInterface />
       <div className="md:h-screen md:my-auto my-20 flex flex-col justify-center items-center md:m-auto mx-5">
         <h2
-          className="md:text-subheadline-3 text-green font-inter md:font-bold font-normal md:text-center"
+          className="md:text-subheadline-3 text-green font-inter md:font-bold font-normal md:text-center md:px-20"
           data-aos="zoom-in-up"
         >
           Discover How to Avoid These Common Pitfalls and Transform Them Into
           Profits with...
         </h2>
         <h1
-          className="md:text-headline-1 text-headline-3 md:text-center text-white font-inter font-black"
+          className="md:text-headline-1 text-headline-3 md:text-center text-white font-inter font-black md:px-20"
           data-aos="zoom-in"
         >
           The Digital Twin Simulation

@@ -141,7 +141,7 @@ function Qualify() {
       <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4">
         <div className="w-full max-w-md bg-card border border-stone-700 shadow-md rounded-lg p-6">
           <h2 className="font-inter text-xl font-bold text-white mb-4">Thank You!</h2>
-          <p className="font-inter text-lg text-white">Your responses have been recorded. We will get back to you soon.</p>
+          <p className="font-inter text-lg text-white mb-5">Your responses have been recorded. We will get back to you soon.</p>
           <Link to='/booking' className='py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150'>Book The Call</Link>
         </div>
       </div>
