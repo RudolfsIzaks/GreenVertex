@@ -30,7 +30,7 @@ function GridBox() {
         </p>
       </div>
       <div className="grid md:grid-cols-5 md:grid-rows-2 md:px-32 md:mt-20 sm:mt-5">
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
           
           <FontAwesomeIcon icon={faDollarSign} className="text-5xl text-green"/>
           <div>
@@ -41,7 +41,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faChartLine} className="text-5xl text-green" />
           <div>
@@ -52,7 +52,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faCog} className="text-5xl text-green" />
           <div>
@@ -63,7 +63,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faChartBar} className="text-5xl text-green" />
           <div>
@@ -74,7 +74,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faArrowsAlt} className="text-5xl text-green" />
           <div>
@@ -85,7 +85,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600  flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faFlask} className="text-5xl text-green" />
           <div>
@@ -96,7 +96,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faProjectDiagram} className="text-5xl text-green" />
           <div>
@@ -107,7 +107,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faCogs} className="text-5xl text-green" />
           <div>
@@ -118,7 +118,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faHandsHelping} className="text-5xl text-green" />
           <div>
@@ -129,7 +129,7 @@ function GridBox() {
           </p>
           </div>
         </div>
-        <div className="px-5 py-10 bg-background border border-stone-600   flex flex-col justify-between text-center h-64 relative  hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
+        <div className="px-5 py-10 bg-background border border-stone-600 sm:m-5 sm:rounded-lg  flex flex-col justify-between sm:items-start md:text-center h-64 relative  md:hover:scale-110 duration-200 hover:bg-background hover:shadow-lg hover:z-10">
         
           <FontAwesomeIcon icon={faPuzzlePiece} className="text-5xl text-green" />
           <div>
