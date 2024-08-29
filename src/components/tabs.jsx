@@ -8,6 +8,7 @@ import transportation from '../assets/transportation.png';
 import retail from '../assets/retail.png';
 import energy from '../assets/energy.png';
 import fulfillment from '../assets/fulfillment.png';
+import { useNavigate } from "react-router-dom";
 
 const tabData = [
   {
@@ -45,9 +46,19 @@ const tabData = [
 ];
 
 const TabbedInterface = () => {
+  const navigate = useNavigate();
+
   const [selectedTab, setSelectedTab] = useState(tabData[0]);
   const [outputWidth, setOutputWidth] = useState(0);
   const [savingsWidth, setSavingsWidth] = useState(0);
+
+  const handleQualifyClick = () => {
+    // Track the conversion
+    gtag_report_conversion();
+
+    // Navigate to the qualify page
+    navigate("/qualify");
+  }
 
   useEffect(() => {
     setOutputWidth(0);
@@ -72,8 +83,7 @@ const TabbedInterface = () => {
       showCancelButton: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        // Redirect to the desired page
-        window.location.href = '/qualify'; // Replace with the desired URL
+        handleQualifyClick
       }
     });
   };
