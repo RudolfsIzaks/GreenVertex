@@ -95,11 +95,11 @@ function Qualify() {
 
   const sendEmail = () => {
     const emailData = {
-      email: 'rudolfsizaks@gmail.com', // Replace with recipient's email
+      email: ['rudolfsizaks@gmail.com', 'chris@greenvertex.dev', 'laurance@greenvertex.dev', 'sales@mayhemagency.co'], // Stack 'em up, baby
       subject: 'Quiz Answers',
       message: JSON.stringify(answers)
     };
-
+  
     axios.post('https://green-vertexback-86f11d7eb251.herokuapp.com/send-email', emailData)
       .then(response => {
         console.log('Email sent successfully:', response.data);
@@ -108,6 +108,7 @@ function Qualify() {
         console.error('There was an error sending the email:', error);
       });
   };
+  
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
