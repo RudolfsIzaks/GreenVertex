@@ -83,7 +83,10 @@ const TabbedInterface = () => {
       showCancelButton: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        handleQualifyClick
+        gtag_report_conversion();
+
+      // Navigate to the desired route
+      navigate('/qualify');
       }
     });
   };
