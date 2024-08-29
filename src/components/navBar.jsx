@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../index.css";
 import vertex from "../assets/vertexLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,10 +7,19 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
   const navRef = useRef();
+  const navigate = useNavigate();
 
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
+
+  const handleQualifyClick = () => {
+    // Track the conversion
+    gtag_report_conversion();
+
+    // Navigate to the qualify page
+    navigate("/qualify");
+  }
 
   return (
     <>
@@ -38,12 +47,12 @@ function NavBar() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/qualify"
+                <button
+                  onClick={handleQualifyClick}
                   className="hover:text-green duration-200"
                 >
                   QUALIFY
-                </NavLink>
+                </button>
               </li>
             </ul>
             <button

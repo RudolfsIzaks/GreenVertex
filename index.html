@@ -31,6 +31,20 @@
 
   gtag('config', 'AW-16644936600');
 </script>
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16644936600/wDnNCPuWn84ZEJin9oA-',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
