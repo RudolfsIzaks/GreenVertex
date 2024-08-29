@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import NavBar from "../components/navBar";
 import "../index.css";
 import TabbedInterface from "../components/tabs";
@@ -23,11 +23,21 @@ import { faCircleInfo, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 function LandingPage() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
+
+  const handleQualifyClick = () => {
+    // Track the conversion
+    gtag_report_conversion();
+
+    // Navigate to the qualify page
+    navigate("/qualify");
+  }
 
   return (
     <>
@@ -105,7 +115,7 @@ function LandingPage() {
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white sm:text-center">Chris Brett</h2>
           <p className="text-gray-300 sm:text-center mb-4">CEO, Co-Founder</p>
-          <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
+          <button onClick={handleQualifyClick} className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</button>
           </div>
         </div>
         <div data-aos="flip-right" className="bg-card p-5 flex items-center gap-6 text-left sm:flex-col sm:text-center rounded-xl border border-gray-800">
@@ -113,7 +123,7 @@ function LandingPage() {
           <div>
           <h2 className="font-inter font-black text-subheadline-2 text-white text-left sm:text-center">Laurence Hole</h2>
           <p className="text-gray-300 sm:text-center mb-4">CTO, Co-Founder</p>
-          <Link to="/qualify" className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</Link>
+          <button onClick={handleQualifyClick} className="py-2 px-5 bg-green text-white mt-2 rounded-md text-md font-inter font-semibold border border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150 sm:text-center">Reach Out</button>
           </div>
         </div>
       </div>
@@ -133,7 +143,7 @@ function LandingPage() {
         This revolutionary technology creates a virtual replica of your operations, allowing you to test and analyze scenarios risk-free.
         In short, It’s a way to guarantee your strategies work in the real world and from the get-go.
         </p>
-        <Link to="/qualify" className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</Link>
+        <Link onClick={handleQualifyClick} className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</Link>
         </div>
       </div>
       <hr className="opacity-20 md:opacity-0"/>
@@ -157,7 +167,7 @@ function LandingPage() {
       <p className="text-white font-inter font-semibold md:text-headline-3 sm:text-md sm:m-5 pr-20 md:px-32 mt-10 md:text-center sm:text-left">But! Our risk-free offer isn’t meant for every business…</p>
       <div className="flex justify-center sm:justify-start mx-5 ">
       <button className="text-white font-inter font-black bg-green md:text-subheadline-4 p-4 px-6 rounded-md md:my-5 border border-green hover:bg-transparent hover:text-green hover:scale-110 transition">
-        <NavLink to="/qualify">
+        <NavLink onClick={handleQualifyClick}>
           <p>See If You Qualify</p>
         </NavLink>
       </button>
