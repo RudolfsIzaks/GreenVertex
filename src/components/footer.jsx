@@ -1,9 +1,19 @@
 import React from "react";
 import "../index.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import vertex from "../assets/vertexLogo.png";
 
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleQualifyClick = () => {
+    // Track the conversion
+    gtag_report_conversion();
+
+    // Navigate to the qualify page
+    navigate("/qualify");
+  }
+
   return (
     <>
       <div className="flex sm:flex-col items-center justify-between md:h-[40vh] md:px-24 bg-background mt-32">
@@ -23,7 +33,7 @@ function Footer() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/qualify" className="bg-black hover:bg-green text-white duration-200 rounded-full px-8 py-2">
+              <NavLink onClick={handleQualifyClick} className="bg-black hover:bg-green text-white duration-200 rounded-full px-8 py-2">
                 QUALIFY
               </NavLink>
             </li>
