@@ -18,7 +18,7 @@ function Booking() {
     }, []);
 
     return (
-        <div id="booking-container"></div>
+        <div className="m-10" id="booking-container"></div>
     );
 }
 
