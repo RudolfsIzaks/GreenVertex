@@ -7,11 +7,18 @@ import {
   faBolt,
   faTruck,
   faWarehouse,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import "../index.css";
 import { Link } from "react-router-dom";
 import form_warehouse from "../assets/form_warehouse.png";
+import img1 from "../assets/3.png";
+import img2 from "../assets/4.png";
+import img3 from "../assets/5.png";
+import img4 from "../assets/6.png";
+import img5 from "../assets/7.png";
+import img6 from "../assets/8.png";
 
 const questions = [
   {
@@ -21,9 +28,8 @@ const questions = [
       { text: "Logistics and Supply Chain", icon: faShippingFast },
       { text: "Retail and Online Grocers", icon: faStore },
       { text: "Energy and Utilities", icon: faBolt },
-      { text: "Transportation", icon: faTruck },
       { text: "Fulfillment Centers", icon: faWarehouse },
-      { text: "Other" },
+      { text: "Other", icon: faSearch },
     ],
   },
   {
@@ -37,11 +43,12 @@ const questions = [
   {
     question: "How soon are you looking to implement new solutions?",
     answers: [
-      { text: "Immediately" },
-      { text: "Within the next 3 months" },
-      { text: "Within the next 6 months" },
-      { text: "Within the next year" },
-      { text: "Just exploring options" },
+      { text: "Immediately", img: img1 },
+      { text: "Within the next 3 months", img: img2 },
+      { text: "Within the next 6 months", img: img3 },
+      { text: "Within the next year", img: img4 },
+      { text: "Just exploring options", img: img5 },
+      { text: "I'm comfortable here.", img: img6 },
     ],
   },
 ];
@@ -53,23 +60,32 @@ function Qualify() {
   const [inputValue, setInputValue] = useState("");
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [validationError, setValidationError] = useState(false);
 
   const handleAnswerClick = (answer) => {
+    // Check if the current question requires an answer and no answer has been selected
+    if (!answer) {
+      setValidationError(true);
+      return; // Don't proceed
+    }
+    
+    setValidationError(false); // Reset validation error if an answer is selected
+    
     const newAnswers = [...answers];
     newAnswers[currentQuestion] = answer;
     setAnswers(newAnswers);
     setInputValue(""); // Clear input field
     setSelectedAnswers([]); // Clear selected answers
-
+  
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setProgress(((currentQuestion + 1) / questions.length) * 100);
     } else {
-      // Handle the end of the quiz here
       setQuizCompleted(true);
       sendEmail();
     }
   };
+  
 
   const sendEmail = () => {
     const emailData = {
@@ -101,8 +117,15 @@ function Qualify() {
   };
 
   const handleInputSubmit = () => {
+    if (!inputValue.trim()) {
+      setValidationError(true);
+      return;
+    }
+  
+    setValidationError(false); // Reset validation error if input is valid
     handleAnswerClick(inputValue);
   };
+  
 
   const handleCheckboxChange = (event, answer) => {
     if (event.target.checked) {
@@ -237,18 +260,30 @@ function Qualify() {
                 </div>
               ) : (
                 <>
-                  {questions[currentQuestion].answers.map((answer, index) => (
-                    <button
-                      key={index}
-                      className="flex items-center p-3 bg-green text-white rounded-lg my-2 hover:bg-emerald-500 transition"
-                      onClick={() => handleAnswerClick(answer.text)}
-                    >
-                      {answer.icon && (
-                        <FontAwesomeIcon icon={answer.icon} className="mr-3" />
-                      )}
-                      {answer.text}
-                    </button>
-                  ))}
+                  <div className="flex flex-wrap gap-5">
+                    {questions[currentQuestion].answers.map((answer, index) => (
+                      <button
+                        key={index}
+                        className="flex flex-col w-40 h-40 items-center justify-between p-5 bg-green text-white rounded-lg my-2 hover:scale-110 hover:bg-emerald-500 transition"
+                        onClick={() => handleAnswerClick(answer.text)}
+                      >
+                        {answer.icon ? (
+                          <FontAwesomeIcon
+                            icon={answer.icon}
+                            className="mr-3 mt-6 text-5xl"
+                          />
+                        ) : (
+                          <img
+                            src={answer.img}
+                            className="w-16"
+                            alt={answer.text}
+                          />
+                        )}
+                        <p className="text-sm mt-3">{answer.text}</p>
+                      </button>
+                    ))}
+                  </div>
+
                   {currentQuestion > 0 && (
                     <button
                       onClick={handleBackClick}
@@ -262,11 +297,19 @@ function Qualify() {
             </div>
           </div>
           <div className="flex sm:flex-col sm:items-center gap-5">
-          <span className="w-[1px] h-[100] sm:hidden bg-white"></span>
-          <img src={form_warehouse} alt="" className="md:w-96 sm:w-64 rounded-md" />
+            <span className="w-[1px] h-[100] sm:hidden bg-white"></span>
+            <img
+              src={form_warehouse}
+              alt=""
+              className="md:min-w-96 md:max-h-[50dvh] sm:w-64 rounded-md"
+            />
           </div>
         </div>
       </div>
+      {validationError && (
+  <p className="text-red-500 mt-2">Please provide an answer before proceeding.</p>
+)}
+
     </div>
   );
 }
