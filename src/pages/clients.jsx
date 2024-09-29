@@ -27,35 +27,12 @@ const questions = [
     ],
   },
   {
-    question: "What’s your best email?",
+    question: "What’s your name?",
     type: "input",
   },
   {
-    question:
-      "What are the primary challenges your business is currently facing?",
-    type: "multiple",
-    answers: [
-      { text: "Bottlenecks in production" },
-      { text: "Inefficiencies in logistics and supply chain" },
-      { text: "Inventory management issues" },
-      { text: "High operational costs" },
-      { text: "Customer service challenges" },
-      { text: "Predicting future demands" },
-      { text: "Other" },
-    ],
-  },
-  {
-    question: "What are your goals for optimizing your operations?",
-    type: "multiple",
-    answers: [
-      { text: "Reduce operational costs" },
-      { text: "Increase throughput and efficiency" },
-      { text: "Improve customer satisfaction" },
-      { text: "Enhance decision-making with data-driven insights" },
-      { text: "Investor Acquisition" },
-      { text: "Make Real-Time Visualizations Of Your Operations" },
-      { text: "Other" },
-    ],
+    question: "What’s your best email?",
+    type: "input",
   },
   {
     question: "How soon are you looking to implement new solutions?",
@@ -66,10 +43,6 @@ const questions = [
       { text: "Within the next year" },
       { text: "Just exploring options" },
     ],
-  },
-  {
-    question: "What’s your company website?",
-    type: "input",
   },
 ];
 
