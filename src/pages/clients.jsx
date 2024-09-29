@@ -48,7 +48,7 @@ const questions = [
       { text: "Within the next 6 months", img: img3 },
       { text: "Within the next year", img: img4 },
       { text: "Just exploring options", img: img5 },
-      { text: "I'm comfortable here.", img: img6 },
+      { text: "Not Looking for Growth", img: img6 },
     ],
   },
 ];
@@ -204,7 +204,7 @@ function Qualify() {
                     onChange={handleInputChange}
                     className="w-full p-3 rounded-lg focus:outline-green outline-none text-white bg-stone-600"
                   />
-                  <div className="flex gap-5">
+                  <div className="flex gap-5 mb-5">
                     <button
                       onClick={handleInputSubmit}
                       className="mt-3 py-2 px-5 bg-green text-white rounded-lg hover:bg-emerald-500 transition"
@@ -260,7 +260,7 @@ function Qualify() {
                 </div>
               ) : (
                 <>
-                  <div className="flex flex-wrap gap-5">
+                  <div className="grid md:grid-cols-3 sm:grid-cols-2 w-auto gap-5">
                     {questions[currentQuestion].answers.map((answer, index) => (
                       <button
                         key={index}
@@ -275,7 +275,7 @@ function Qualify() {
                         ) : (
                           <img
                             src={answer.img}
-                            className="w-16"
+                            className="w-20"
                             alt={answer.text}
                           />
                         )}
@@ -295,14 +295,6 @@ function Qualify() {
                 </>
               )}
             </div>
-          </div>
-          <div className="flex sm:flex-col sm:items-center gap-5">
-            <span className="w-[1px] h-[100] sm:hidden bg-white"></span>
-            <img
-              src={form_warehouse}
-              alt=""
-              className="md:min-w-96 md:max-h-[50dvh] sm:w-64 rounded-md"
-            />
           </div>
         </div>
       </div>
