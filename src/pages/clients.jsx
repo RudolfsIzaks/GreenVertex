@@ -93,7 +93,7 @@ function Qualify() {
         "rudolfsizaks@gmail.com",
         "chris@greenvertex.dev",
         "laurance@greenvertex.dev",
-        "sales@mayhemagency.co",
+        "info@mayhemagency.co",
       ], // Stack 'em up, baby
       subject: "Quiz Answers",
       message: JSON.stringify(answers),
