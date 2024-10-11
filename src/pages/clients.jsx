@@ -63,28 +63,31 @@ function Qualify() {
   const [validationError, setValidationError] = useState(false);
 
   const handleAnswerClick = (answer) => {
-    // Check if the current question requires an answer and no answer has been selected
     if (!answer) {
       setValidationError(true);
       return; // Don't proceed
     }
-    
-    setValidationError(false); // Reset validation error if an answer is selected
-    
+  
+    setValidationError(false);
+  
     const newAnswers = [...answers];
     newAnswers[currentQuestion] = answer;
-    setAnswers(newAnswers);
+    
+    // Ensure the state is updated and then proceed
+    setAnswers(newAnswers, () => {
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+        setProgress(((currentQuestion + 1) / questions.length) * 100);
+      } else {
+        setQuizCompleted(true);
+        sendEmail(); // Email is sent only after answers state has been updated
+      }
+    });
+    
     setInputValue(""); // Clear input field
     setSelectedAnswers([]); // Clear selected answers
-  
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-      setProgress(((currentQuestion + 1) / questions.length) * 100);
-    } else {
-      setQuizCompleted(true);
-      sendEmail();
-    }
   };
+  
   
 
   const sendEmail = () => {
@@ -94,7 +97,7 @@ function Qualify() {
         "chris@greenvertex.dev",
         "laurance@greenvertex.dev",
         "info@mayhemagency.co",
-      ], // Stack 'em up, baby
+      ],
       subject: "Quiz Answers",
       message: JSON.stringify(answers),
     };
