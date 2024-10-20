@@ -33,9 +33,9 @@ function Footer() {
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleQualifyClick} className="bg-black hover:bg-green text-white duration-200 rounded-full px-8 py-2">
+              <button onClick={handleQualifyClick} className="bg-black hover:bg-green text-white duration-200 rounded-full px-8 py-2">
                 QUALIFY
-              </NavLink>
+              </button>
             </li>
           </ul>
         </div>
