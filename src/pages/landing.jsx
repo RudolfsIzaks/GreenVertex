@@ -33,7 +33,7 @@ function LandingPage() {
 
   const handleQualifyClick = () => {
     // Track the conversion
-    gtag_report_conversion();
+    // gtag_report_conversion();
 
     // Navigate to the qualify page
     navigate("/qualify");
