@@ -33,7 +33,7 @@ function LandingPage() {
 
   const handleQualifyClick = () => {
     // Track the conversion
-    // gtag_report_conversion();
+    gtag_report_conversion();
 
     // Navigate to the qualify page
     navigate("/qualify");
@@ -143,7 +143,7 @@ function LandingPage() {
         This revolutionary technology creates a virtual replica of your operations, allowing you to test and analyze scenarios risk-free.
         In short, It’s a way to guarantee your strategies work in the real world and from the get-go.
         </p>
-        <Link onClick={handleQualifyClick} className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</Link>
+        <button onClick={handleQualifyClick} className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</button>
         </div>
       </div>
       <hr className="opacity-20 md:opacity-0"/>
@@ -166,10 +166,8 @@ function LandingPage() {
       <GridBox/>
       <p className="text-white font-inter font-semibold md:text-headline-3 sm:text-md sm:m-5 pr-20 md:px-32 mt-10 md:text-center sm:text-left">But! Our risk-free offer isn’t meant for every business…</p>
       <div className="flex justify-center sm:justify-start mx-5 ">
-      <button className="text-white font-inter font-black bg-green md:text-subheadline-4 p-4 px-6 rounded-md md:my-5 border border-green hover:bg-transparent hover:text-green hover:scale-110 transition">
-        <NavLink onClick={handleQualifyClick}>
+      <button onClick={handleQualifyClick} className="text-white font-inter font-black bg-green md:text-subheadline-4 p-4 px-6 rounded-md md:my-5 border border-green hover:bg-transparent hover:text-green hover:scale-110 transition">
           <p>See If You Qualify</p>
-        </NavLink>
       </button>
       </div>
       <Casestudy/>
