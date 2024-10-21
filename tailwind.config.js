@@ -26,6 +26,8 @@ module.exports = {
       },
       screens: {
         'sm': { 'max': '768px' },
+        'tablet': { 'min': '769px', 'max': '1024px' },
+        'md': { 'min': '1025px'}
       },
     },
   },

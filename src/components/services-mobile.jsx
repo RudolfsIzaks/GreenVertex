@@ -60,8 +60,8 @@ function ServiceMobile() {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center md:w-2/3 m-5">
-        <p className="text-sm font-inter text-green md:text-center text-left">
+      <div className="flex flex-col sm:items-center text-center md:w-2/3 tablet:mx-20 tablet:my-10 sm:m-5">
+        <p className="text-sm font-inter text-green md:text-center tablet:text-left sm:text-left">
           Experience risk-free testing across all facets of your business…
         </p>
         <h1 className="font-inter md:text-headline-2 text-subheadline-4 font-black text-white my-5 md:text-center text-left">
@@ -76,7 +76,7 @@ function ServiceMobile() {
           </i>
         </p>
       </div>
-      <div className="m-5">
+      <div className="m-5 tablet:mx-20">
         {services.map((service, index) => (
           <div
             key={index}

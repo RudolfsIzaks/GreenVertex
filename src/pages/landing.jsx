@@ -43,20 +43,20 @@ function LandingPage() {
     <>
       <div className="hero h-screen flex justify-center items-center">
         <NavBar />
-        <div className="flex md:flex-row flex-col items-center md:justify-between justify-center md:mt-10 md:px-32 mx-5">
-          <div className="md:w-1/2 relative z-10 flex md:block justify-center items-center flex-col">
-            <p className="text-green md:text-subheadline-3 mb-2 md:text-left text-center text-sm">
+        <div className="flex tablet:flex-row md:flex-row sm:flex-col items-center md:justify-between justify-center md:mt-10 tablet:px-10 md:px-32 sm:px-0 sm:mx-5">
+          <div className="md:w-1/2 tablet:w-2/3 relative z-10 flex md:block justify-center sm:items-center flex-col">
+            <p className="text-green tablet:leading-relaxed tablet:text-subheadline-4 md:text-subheadline-3 mb-2 text-left sm:text-center text-sm">
               Ready To Turn Profit Leaks Into Revenue Streams?
             </p>
-            <h1 className="text-white md:text-headline-2 font-inter font-black md:text-left text-subheadline-4 md:my-1 my-5 text-center">
+            <h1 className="text-white md:text-headline-2 tablet:text-headline-3 font-inter font-black text-left text-subheadline-4 md:my-1 my-5 sm:text-center">
               Slash Costs, Eliminate Inefficiencies & Uplift Profitability!
             </h1>
-            <p className="text-white md:text-md font-inter mt-2 mb-5 md:w-96 text-sm text-center md:text-left">
+            <p className="text-white md:text-md font-inter mt-2 mb-5 md:w-96 text-sm sm:text-center text-left">
               Transforming your operations into well-oiled machine is what we do best.
             </p>
             <a href="#down" className="py-2 px-8 bg-green text-white mt-10 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</a>
           </div>
-          <div className="absolute z-0 top-24 right-10 md:top-auto md:bottom-auto md:w-1/2">
+          <div className="absolute tablet:relative tablet:top-auto tablet:bottom-auto z-0 top-24 right-10 md:top-auto md:bottom-auto tablet:w-1/3 md:w-1/2">
             <img src={BG3D} alt="" />
           </div>
         </div>
@@ -89,10 +89,10 @@ function LandingPage() {
         </div>
       </div>
       <div className="flex md:flex-row flex-col items-center md:px-32 gap-10 mb-24 md:mx-auto mx-5">
-      <div className="md:hidden">
+      <div className="md:hidden tablet:hidden">
         <MobileTextCollapse />
       </div>
-      <div className="md:w-1/2 sm:hidden">
+      <div className="md:w-1/2 sm:hidden tablet:hidden">
         <h1 className="font-inter font-black md:text-headline-1 text-headline-3 text-white">Meet Green Vertex</h1>
         <p className="font-inter md:font-black text-md text-green mb-5 md:w-2/3">
           Reducing costs, optimizing complex processes, and
@@ -128,7 +128,7 @@ function LandingPage() {
         </div>
       </div>
       </div>
-      <div className="relative md:px-32 md:h-screen sm:mb-20 flex md:flex-row flex-col-reverse justify-center items-center">
+      <div className="relative md:px-32 tablet:px-20 tablet:my-24 md:h-screen sm:mb-20 flex md:flex-row flex-col-reverse justify-center items-center">
       <div className="md:w-1/3 md:h-80 mx-5 z-10 bg-background bg_sim rounded-xl">
         </div>
         <div className="md:w-2/3 mx-5 mb-5">
@@ -147,24 +147,24 @@ function LandingPage() {
         </div>
       </div>
       <hr className="opacity-20 md:opacity-0"/>
-      <div className="sm:hidden">
+      <div className="sm:hidden tablet:hidden">
       <Services/>
       </div>
       <div className="md:hidden">
         <ServiceMobile/>
       </div>
-      <div className="flex sm:flex-col-reverse items-center sm:gap-4 md:gap-4 h-screen mx-5 md:px-32 mb-48">
+      <div className="flex sm:flex-col-reverse items-center sm:gap-4 md:gap-4 sm:h-screen tablet:mx-20 tablet:my-64 md:mb-48 sm:mx-5 md:px-32 sm:mb-48">
         <div className="bg-background rounded-xl z-10 md:p-5 md:w-3/5">
         <p className="text-green font-inter font-bold text-left z-10">Success isn't a secret; it's a strategy…</p>
         <h1 className="text-white font-inter font-black md:text-headline-2 text-2xl leading-normal z-10">The Fastest And Easiest Way To Guarantee Success!</h1>
         <p className="text-white font-inter md:w-2/3 md:mt-2 leading-relaxed z-10">Boosting efficiency and cutting costs is critical. After all, time is money, and poor operations drain your business's resources. Luckily, there are a few solutions. You can either painstakingly analyze charts, risk testing in the real world for months, gamble with your intuition, or take a better route…</p>
         </div>
-        <div className="md:w-2/5 sm:w-11/12">
+        <div className="md:w-2/5 tablet:w-full tablet:ml-10 sm:w-11/12">
           <img src={Growth}  />
         </div>
       </div>
       <GridBox/>
-      <p className="text-white font-inter font-semibold md:text-headline-3 sm:text-md sm:m-5 pr-20 md:px-32 mt-10 md:text-center sm:text-left">But! Our risk-free offer isn’t meant for every business…</p>
+      <p className="text-white font-inter font-semibold md:text-headline-3 tablet:text-subheadline-3 tablet:px-20 sm:text-md sm:m-5 pr-20 md:px-32 my-10 md:text-center sm:text-left">But! Our risk-free offer isn’t meant for every business…</p>
       <div className="flex justify-center sm:justify-start mx-5 ">
       <button onClick={handleQualifyClick} className="text-white font-inter font-black bg-green md:text-subheadline-4 p-4 px-6 rounded-md md:my-5 border border-green hover:bg-transparent hover:text-green hover:scale-110 transition">
           <p>See If You Qualify</p>

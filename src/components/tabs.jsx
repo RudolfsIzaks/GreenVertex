@@ -101,9 +101,9 @@ const TabbedInterface = () => {
 
   return (
     <div className="gap-0 pb-10 md:h-screen grid md:grid-cols-8 grid_cont justify-center">
-      <div className="grid_dummy md:block hidden"></div>
-      <div className="grid_dummy md:block hidden"></div>
-      <div className="container h-full md:col-start-3 md:col-span-4 col-span-8 button_grid">
+      <div className="grid_dummy md:block hidden tablet:hidden"></div>
+      <div className="grid_dummy md:block hidden tablet:hidden"></div>
+      <div className="container h-full md:col-start-3 md:col-span-4 sm:col-span-8 tablet:col-start-2 tablet:col-span-6 button_grid">
         <h2 className="relative z-10 md:text-headline-3 text-subheadline-3 font-inter font-extrabold text-white p-3 text-center">These Issues are All Too Common In…</h2>
         <div className="tabs flex w-full justify-center flex-wrap items-center px-4 pb-4 rounded-xl mt-4 gap-4">
           {tabData.map((tab, index) => (

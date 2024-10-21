@@ -21,7 +21,7 @@ function Casestudy() {
   return (
     <>
     <hr className="opacity-10 mt-10"/>
-      <div className="md:px-32 mt-20 sm:mx-5">
+      <div className="md:px-32 tablet:px-20 mt-20 sm:mx-5">
         <div className="flex items-center justify-start gap-3 italic text-[#FEC039] font-inter font-bold text-subheadline-3 mb-8">
           Green Vertex Project: 
           <img src={apianLogo} alt="apian logo" className="w-36" />
@@ -30,7 +30,7 @@ function Casestudy() {
           Revolutionizing Healthcare Deliveries with Drones
         </h1>
       </div>
-      <div className="md:px-32 md:mt-10 sm:mx-5">
+      <div className="md:px-32 tablet:px-20 md:mt-10 sm:mx-5">
         <p className="text-stone-300">
           Apian was faced with a monumental challenge: <br />
           <br />
@@ -117,7 +117,7 @@ function Casestudy() {
         </button>
       </div>
       <hr className="opacity-10 mt-10"/>
-      <div className="md:px-32 mt-20 sm:mx-5">
+      <div className="md:px-32 tablet:px-20 mt-20 sm:mx-5">
       <div className="flex items-center justify-start gap-3 italic text-[#4C216D] font-inter font-bold text-subheadline-3 mb-8">
           Green Vertex Project: 
           <img src={ocadoLogo} alt="apian logo" className="w-36" />
@@ -126,7 +126,7 @@ function Casestudy() {
           Transforming Fulfillment with Digital Twin Simulation
         </h1>
       </div>
-      <div className="md:px-32 md:mt-10 sm:mx-5">
+      <div className="md:px-32 tablet:px-20 md:mt-10 sm:mx-5">
         <p className="text-stone-300">
           Ocado Technology, a leader in online grocery fulfillment, was looking to create a cutting-edge robotics-based storage and retrieval system ("The Hive"). <br />
           <br />

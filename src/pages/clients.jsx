@@ -169,7 +169,7 @@ function Qualify() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4">
-      <div className="md:w-3/5 sm:w-full m-5">
+      <div className="md:w-3/5 tablet:w-3/4 sm:w-full m-5">
         <div className="relative pt-1">
           <div className="flex mb-2 items-center justify-between">
             <div>
@@ -260,7 +260,7 @@ function Qualify() {
                 </div>
               ) : (
                 <>
-                  <div className="grid md:grid-cols-3 sm:grid-cols-2 w-auto gap-5">
+                  <div className="grid md:grid-cols-3 tablet:grid-cols-3 sm:grid-cols-2 w-auto gap-5">
                     {questions[currentQuestion].answers.map((answer, index) => (
                       <button
                         key={index}

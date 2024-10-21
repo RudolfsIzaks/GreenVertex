@@ -56,7 +56,7 @@ function NavBar() {
               </li>
             </ul>
             <button
-              className="md:hidden md:opacity-0 nav_close text-3xl text-white"
+              className="md:hidden tablet:flex md:opacity-0 nav_close text-3xl text-white"
               onClick={showNavBar}
             >
               <FontAwesomeIcon icon={faTimes} />
