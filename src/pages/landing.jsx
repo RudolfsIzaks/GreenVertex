@@ -143,7 +143,7 @@ function LandingPage() {
         This revolutionary technology creates a virtual replica of your operations, allowing you to test and analyze scenarios risk-free.
         In short, It’s a way to guarantee your strategies work in the real world and from the get-go.
         </p>
-        <button onClick={handleQualifyClick} className="py-2 px-8 bg-green text-white mt-5 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</button>
+        <button onClick={handleQualifyClick} className="relative py-2 px-8 bg-green text-white mt-5 z-10 rounded-md text-lg font-inter font-semibold border w-48 border-green hover:bg-transparent hover:scale-110 hover:text-green duration-150">Learn More</button>
         </div>
       </div>
       <hr className="opacity-20 md:opacity-0"/>
